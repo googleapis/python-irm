@@ -1,27 +1,32 @@
 {
-  "updateTime": "2020-02-05T21:45:36.061544Z",
   "sources": [
     {
       "generator": {
         "name": "artman",
-        "version": "0.44.4",
-        "dockerImage": "googleapis/artman@sha256:19e945954fc960a4bdfee6cb34695898ab21a8cf0bac063ee39b91f00a1faec8"
+        "version": "2.0.0",
+        "dockerImage": "googleapis/artman@sha256:b3b47805231a305d0f40c4bf069df20f6a2635574e6d4259fac651d3f9f6e098"
+      }
+    },
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/python-irm.git",
+        "sha": "c2dd454f59b0761ce98e82aac9b7742eb7c18d7f"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "c8aef82028d06b7992278fa9294c18570dc86c3d",
-        "internalRef": "293440538",
-        "log": "c8aef82028d06b7992278fa9294c18570dc86c3d\nAdd cc_proto_library and cc_grpc_library targets for Bigtable protos.\n\nAlso fix indentation of cc_grpc_library targets in Spanner and IAM protos.\n\nPiperOrigin-RevId: 293440538\n\n"
+        "sha": "42ee97c1b93a0e3759bbba3013da309f670a90ab",
+        "internalRef": "307114445"
       }
     },
     {
-      "template": {
-        "name": "python_split_library",
-        "origin": "synthtool.gcp",
-        "version": "2019.10.17"
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "f5e4c17dc78a966dbf29961dd01f9bbd63e20a04"
       }
     }
   ],

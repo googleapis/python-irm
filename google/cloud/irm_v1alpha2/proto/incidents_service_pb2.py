@@ -3154,8 +3154,6 @@ CreateIncidentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATEINCIDENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateIncident method.
-  
-  
   Attributes:
       incident:
           Required. The incident to create.
@@ -3176,8 +3174,6 @@ GetIncidentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_GETINCIDENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the GetIncident method.
-  
-  
   Attributes:
       name:
           Required. Resource name of the incident, for example,
@@ -3195,8 +3191,6 @@ UpdateIncidentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_UPDATEINCIDENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the UpdateIncident method.
-  
-  
   Attributes:
       incident:
           Required. The incident to update with the new values.
@@ -3215,8 +3209,6 @@ SearchSimilarIncidentsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHSIMILARINCIDENTSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the SearchSimilarIncidents method.
-  
-  
   Attributes:
       name:
           Required. Resource name of the incident or signal, for
@@ -3243,10 +3235,8 @@ SearchSimilarIncidentsResponse = _reflection.GeneratedProtocolMessageType(
             dict(
                 DESCRIPTOR=_SEARCHSIMILARINCIDENTSRESPONSE_RESULT,
                 __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
-                __doc__="""A single search result, i.e. an incident with
-    (potentially) additional information.
-    
-    
+                __doc__="""A single search result, i.e. an incident with (potentially) additional
+    information.
     Attributes:
         incident:
             An incident that is "similar" to the incident or signal
@@ -3258,8 +3248,6 @@ SearchSimilarIncidentsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHSIMILARINCIDENTSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the SearchSimilarIncidents method.
-  
-  
   Attributes:
       results:
           The search results, ordered by descending relevance.
@@ -3279,8 +3267,6 @@ CreateAnnotationRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATEANNOTATIONREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateAnnotation method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3300,8 +3286,6 @@ ListAnnotationsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTANNOTATIONSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the ListAnnotations method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3324,8 +3308,6 @@ ListAnnotationsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTANNOTATIONSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the ListAnnotations method.
-  
-  
   Attributes:
       annotations:
           List of annotations.
@@ -3344,8 +3326,6 @@ CreateTagRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATETAGREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateTag method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3366,8 +3346,6 @@ DeleteTagRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_DELETETAGREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the DeleteTag method.
-  
-  
   Attributes:
       name:
           Required. Resource name of the tag.
@@ -3384,8 +3362,6 @@ ListTagsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTTAGSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the ListTagsForIncident method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3408,8 +3384,6 @@ ListTagsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTTAGSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the ListTagsForIncident method.
-  
-  
   Attributes:
       tags:
           Tags.
@@ -3428,8 +3402,6 @@ CreateSignalRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATESIGNALREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateSignal method.
-  
-  
   Attributes:
       parent:
           Required. The resource name of the hosting Stackdriver project
@@ -3449,8 +3421,6 @@ SearchSignalsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHSIGNALSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the SearchSignals method.
-  
-  
   Attributes:
       parent:
           Required. The resource name of the hosting Stackdriver project
@@ -3522,8 +3492,6 @@ SearchSignalsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHSIGNALSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the SearchSignals method.
-  
-  
   Attributes:
       signals:
           Signals that matched the query in the request.
@@ -3542,8 +3510,6 @@ GetSignalRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_GETSIGNALREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the GetSignal method.
-  
-  
   Attributes:
       name:
           Required. Resource name of the Signal resource, for example,
@@ -3561,8 +3527,6 @@ LookupSignalRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LOOKUPSIGNALREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the LookupSignal method.
-  
-  
   Attributes:
       alternate_id:
           The ID to use for lookup.
@@ -3585,8 +3549,6 @@ UpdateSignalRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_UPDATESIGNALREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the UpdateSignal method.
-  
-  
   Attributes:
       signal:
           Required. The signal to update with the new values.
@@ -3605,8 +3567,6 @@ SearchIncidentsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHINCIDENTSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the SearchIncidents method.
-  
-  
   Attributes:
       parent:
           Required. The resource name of the hosting Stackdriver project
@@ -3677,8 +3637,6 @@ SearchIncidentsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SEARCHINCIDENTSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the SearchIncidents method.
-  
-  
   Attributes:
       incidents:
           Incidents.
@@ -3697,8 +3655,6 @@ EscalateIncidentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_ESCALATEINCIDENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to escalate an incident.
-  
-  
   Attributes:
       incident:
           Required. The incident to escalate with the new values.
@@ -3729,8 +3685,6 @@ EscalateIncidentResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_ESCALATEINCIDENTRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for EscalateIncident.
-  
-  
   Attributes:
       incident:
           The escalated incident.
@@ -3755,8 +3709,6 @@ CreateArtifactRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATEARTIFACTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateArtifact method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3776,8 +3728,6 @@ ListArtifactsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTARTIFACTSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the ListArtifacts method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3800,8 +3750,6 @@ ListArtifactsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTARTIFACTSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the ListArtifacts method.
-  
-  
   Attributes:
       artifacts:
           List of artifacts.
@@ -3820,8 +3768,6 @@ UpdateArtifactRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_UPDATEARTIFACTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the UpdateArtifact method.
-  
-  
   Attributes:
       artifact:
           Required. The artifact to update with the new values.
@@ -3840,8 +3786,6 @@ DeleteArtifactRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_DELETEARTIFACTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for deleting an artifact.
-  
-  
   Attributes:
       name:
           Required. Resource name of the artifact.
@@ -3861,11 +3805,9 @@ SendShiftHandoffRequest = _reflection.GeneratedProtocolMessageType(
             dict(
                 DESCRIPTOR=_SENDSHIFTHANDOFFREQUEST_INCIDENT,
                 __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
-                __doc__="""Describes an incident for inclusion in the handoff. This
-    is wrapped in a message to provide flexibility for potentially attaching
-    additional data to each incident in the future.
-    
-    
+                __doc__="""Describes an incident for inclusion in the handoff. This is wrapped in
+    a message to provide flexibility for potentially attaching additional
+    data to each incident in the future.
     Attributes:
         name:
             Resource name of the incident, for example,
@@ -3877,8 +3819,6 @@ SendShiftHandoffRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SENDSHIFTHANDOFFREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""SendShiftHandoff and PreviewShiftHandoff RPC request.
-  
-  
   Attributes:
       parent:
           Required. The resource name of the Stackdriver project that
@@ -3916,8 +3856,6 @@ SendShiftHandoffResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_SENDSHIFTHANDOFFRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""SendShiftHandoff and PreviewShiftHandoff RPC response.
-  
-  
   Attributes:
       content_type:
           Content type string, for example, 'text/plain' or 'text/html'.
@@ -3938,8 +3876,6 @@ CreateSubscriptionRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATESUBSCRIPTIONREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the CreateSubscription method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -3959,8 +3895,6 @@ UpdateSubscriptionRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_UPDATESUBSCRIPTIONREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the UpdateSubscription method.
-  
-  
   Attributes:
       subscription:
           Required. The subscription to update, with new values.
@@ -3979,8 +3913,6 @@ ListSubscriptionsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTSUBSCRIPTIONSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for the ListSubscriptions method.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -4003,8 +3935,6 @@ ListSubscriptionsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTSUBSCRIPTIONSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the ListSubscriptions method.
-  
-  
   Attributes:
       subscriptions:
           List of subscriptions.
@@ -4023,8 +3953,6 @@ DeleteSubscriptionRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_DELETESUBSCRIPTIONREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for deleting a subscription.
-  
-  
   Attributes:
       name:
           Required. Resource name of the subscription.
@@ -4041,8 +3969,6 @@ CreateIncidentRoleAssignmentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CREATEINCIDENTROLEASSIGNMENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for creating a role assignment.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -4062,8 +3988,6 @@ DeleteIncidentRoleAssignmentRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_DELETEINCIDENTROLEASSIGNMENTREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request for deleting a role assignment.
-  
-  
   Attributes:
       name:
           Required. Resource name of the role assignment.
@@ -4080,8 +4004,6 @@ ListIncidentRoleAssignmentsRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTINCIDENTROLEASSIGNMENTSREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to list role assignments of an incident.
-  
-  
   Attributes:
       parent:
           Required. Resource name of the incident, for example,
@@ -4104,8 +4026,6 @@ ListIncidentRoleAssignmentsResponse = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_LISTINCIDENTROLEASSIGNMENTSRESPONSE,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Response for the ListIncidentRoleAssignments method.
-  
-  
   Attributes:
       incident_role_assignments:
           List of assignments.
@@ -4124,8 +4044,6 @@ RequestIncidentRoleHandoverRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_REQUESTINCIDENTROLEHANDOVERREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to start a role handover.
-  
-  
   Attributes:
       name:
           Required. Resource name of the role assignment.
@@ -4144,8 +4062,6 @@ ConfirmIncidentRoleHandoverRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CONFIRMINCIDENTROLEHANDOVERREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to confirm a role handover.
-  
-  
   Attributes:
       name:
           Required. Resource name of the role assignment.
@@ -4166,8 +4082,6 @@ ForceIncidentRoleHandoverRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_FORCEINCIDENTROLEHANDOVERREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to force a role handover.
-  
-  
   Attributes:
       name:
           Required. Resource name of the role assignment.
@@ -4188,8 +4102,6 @@ CancelIncidentRoleHandoverRequest = _reflection.GeneratedProtocolMessageType(
         DESCRIPTOR=_CANCELINCIDENTROLEHANDOVERREQUEST,
         __module__="google.cloud.irm_v1alpha2.proto.incidents_service_pb2",
         __doc__="""Request to cancel a role handover.
-  
-  
   Attributes:
       name:
           Required. Resource name of the role assignment.
