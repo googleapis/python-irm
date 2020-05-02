@@ -20,16 +20,16 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-gapic = gcp.GAPICGenerator()
+gapic = gcp.GAPICBazel()
 common = gcp.CommonTemplates()
 
 # ----------------------------------------------------------------------------
 # Generate dlp GAPIC layer
 # ----------------------------------------------------------------------------
 library = gapic.py_library(
-    "irm",
-    "v1alpha2",
-    config_path="/google/cloud/irm/artman_irm_v1alpha2.yaml",
+    service="irm",
+    version="v1alpha2",
+    bazel_target="//google/cloud/irm/v1alpha2:irm-v1alpha2-py",
     include_protos=True,
 )
 
