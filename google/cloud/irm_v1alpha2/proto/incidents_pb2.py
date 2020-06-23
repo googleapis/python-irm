@@ -1914,8 +1914,6 @@ User = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _USER,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """A user of the IRM app.
-  
-  
   Attributes:
       user:
           One of several ways to uniquely identify a user.
@@ -1947,8 +1945,6 @@ Signal = _reflection.GeneratedProtocolMessageType(
                 "DESCRIPTOR": _SIGNAL_SIGNALARTIFACT,
                 "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
                 "__doc__": """An artifact associated with the Signal.
-    
-    
     Attributes:
         artifact_type:
             The type of resource linked to
@@ -1964,8 +1960,6 @@ Signal = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """A signal is a message calling attention to a (potential) incident. An
   example is a page based on a Stackdriver Alerting policy.
-  
-  
   Attributes:
       name:
           Resource name of the signal, for example,
@@ -2019,8 +2013,6 @@ Annotation = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _ANNOTATION,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """A text annotation by a user.
-  
-  
   Attributes:
       name:
           Resource name of the annotation, for example, “projects/{proje
@@ -2048,8 +2040,6 @@ Tag = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _TAG,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """A tag by a user.
-  
-  
   Attributes:
       name:
           Resource name of a tag, for example, “projects/{project_id_or_
@@ -2069,10 +2059,8 @@ Synopsis = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _SYNOPSIS,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-        "__doc__": """Synopsis is a summary of an incident and it contains a
-  textual content, an author and a last updated timestamp.
-  
-  
+        "__doc__": """Synopsis is a summary of an incident and it contains a textual
+  content, an author and a last updated timestamp.
   Attributes:
       content_type:
           Content type string, for example, ‘text/plain’ or
@@ -2100,10 +2088,8 @@ Incident = _reflection.GeneratedProtocolMessageType(
             {
                 "DESCRIPTOR": _INCIDENT_COMMUNICATIONVENUE,
                 "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-                "__doc__": """CommunicationVenue is a record of where conversations
-    about an incident are happening.
-    
-    
+                "__doc__": """CommunicationVenue is a record of where conversations about an
+    incident are happening.
     Attributes:
         uri:
             A URI to the web interface of the channel.
@@ -2118,8 +2104,6 @@ Incident = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _INCIDENT,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """Representation of an incident.
-  
-  
   Attributes:
       name:
           Output only. Resource name of the incident, for example,
@@ -2167,8 +2151,6 @@ IncidentRole = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _INCIDENTROLE,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """Describes a role that can be assigned to an incident.
-  
-  
   Attributes:
       type:
           The type of role. The role type is immutable in role
@@ -2192,10 +2174,7 @@ IncidentRoleAssignment = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _INCIDENTROLEASSIGNMENT,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-        "__doc__": """Stores the assignee of a role as well as the proposed next
-  assignee.
-  
-  
+        "__doc__": """Stores the assignee of a role as well as the proposed next assignee.
   Attributes:
       name:
           Output only. Resource name such as “projects/{project_id_or_nu
@@ -2241,8 +2220,6 @@ Artifact = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _ARTIFACT,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
         "__doc__": """External artifact associated to an incident.
-  
-  
   Attributes:
       name:
           Output only. Resource name such as “projects/{project_id_or_nu
@@ -2273,10 +2250,7 @@ CommunicationChannel = _reflection.GeneratedProtocolMessageType(
             {
                 "DESCRIPTOR": _COMMUNICATIONCHANNEL_EMAIL,
                 "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-                "__doc__": """A communication channel that delivers messages to an email
-    address.
-    
-    
+                "__doc__": """A communication channel that delivers messages to an email address.
     Attributes:
         address:
             The email address, for example, “user@example.com”.
@@ -2290,10 +2264,8 @@ CommunicationChannel = _reflection.GeneratedProtocolMessageType(
             {
                 "DESCRIPTOR": _COMMUNICATIONCHANNEL_NOTIFICATIONCHANNEL,
                 "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-                "__doc__": """A communication channel that delivers messages to a
-    Stackdriver notification channel.
-    
-    
+                "__doc__": """A communication channel that delivers messages to a Stackdriver
+    notification channel.
     Attributes:
         name:
             Stackdriver notification channel name.
@@ -2303,10 +2275,8 @@ CommunicationChannel = _reflection.GeneratedProtocolMessageType(
         ),
         "DESCRIPTOR": _COMMUNICATIONCHANNEL,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-        "__doc__": """Communication Channels are mechanisms used to receive
-  notifications about changes to incidents.
-  
-  
+        "__doc__": """Communication Channels are mechanisms used to receive notifications
+  about changes to incidents.
   Attributes:
       endpoint:
           An endpoint describes how messages will be delivered.
@@ -2329,10 +2299,8 @@ Subscription = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _SUBSCRIPTION,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-        "__doc__": """A subscription allows users to get notifications about
-  changes to an incident.
-  
-  
+        "__doc__": """A subscription allows users to get notifications about changes to an
+  incident.
   Attributes:
       name:
           Output only. Resource name such as “projects/{project_id_or_nu
