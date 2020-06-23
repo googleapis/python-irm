@@ -42,7 +42,7 @@ from google.protobuf import empty_pb2
 from google.protobuf import field_mask_pb2
 
 
-_GAPIC_LIBRARY_VERSION = pkg_resources.get_distribution("google-cloud-irm").version
+_GAPIC_LIBRARY_VERSION = pkg_resources.get_distribution("google-cloud-irm",).version
 
 
 class IncidentServiceClient(object):
@@ -118,14 +118,14 @@ class IncidentServiceClient(object):
     def project_path(cls, project):
         """Return a fully-qualified project string."""
         return google.api_core.path_template.expand(
-            "projects/{project}", project=project
+            "projects/{project}", project=project,
         )
 
     @classmethod
     def signal_path(cls, project, signal):
         """Return a fully-qualified signal string."""
         return google.api_core.path_template.expand(
-            "projects/{project}/signals/{signal}", project=project, signal=signal
+            "projects/{project}/signals/{signal}", project=project, signal=signal,
         )
 
     @classmethod
@@ -235,12 +235,12 @@ class IncidentServiceClient(object):
                 self.transport = transport
         else:
             self.transport = incident_service_grpc_transport.IncidentServiceGrpcTransport(
-                address=api_endpoint, channel=channel, credentials=credentials
+                address=api_endpoint, channel=channel, credentials=credentials,
             )
 
         if client_info is None:
             client_info = google.api_core.gapic_v1.client_info.ClientInfo(
-                gapic_version=_GAPIC_LIBRARY_VERSION
+                gapic_version=_GAPIC_LIBRARY_VERSION,
             )
         else:
             client_info.gapic_version = _GAPIC_LIBRARY_VERSION
@@ -251,7 +251,7 @@ class IncidentServiceClient(object):
         # (Ordinarily, these are the defaults specified in the `*_config.py`
         # file next to this one.)
         self._method_configs = google.api_core.gapic_v1.config.parse_method_configs(
-            client_config["interfaces"][self._INTERFACE_NAME]
+            client_config["interfaces"][self._INTERFACE_NAME],
         )
 
         # Save a dictionary of cached API call functions.
@@ -309,7 +309,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteArtifactRequest(name=name)
+        request = incidents_service_pb2.DeleteArtifactRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -394,7 +394,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.RequestIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -479,7 +479,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ConfirmIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -564,7 +564,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ForceIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -644,7 +644,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateIncidentRequest(
-            incident=incident, parent=parent
+            incident=incident, parent=parent,
         )
         if metadata is None:
             metadata = []
@@ -715,7 +715,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.GetIncidentRequest(name=name)
+        request = incidents_service_pb2.GetIncidentRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -870,7 +870,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchIncidentsRequest(
-            parent=parent, query=query, page_size=page_size, time_zone=time_zone
+            parent=parent, query=query, page_size=page_size, time_zone=time_zone,
         )
         if metadata is None:
             metadata = []
@@ -961,7 +961,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateIncidentRequest(
-            incident=incident, update_mask=update_mask
+            incident=incident, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -1056,7 +1056,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchSimilarIncidentsRequest(
-            name=name, page_size=page_size
+            name=name, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1148,7 +1148,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateAnnotationRequest(
-            parent=parent, annotation=annotation
+            parent=parent, annotation=annotation,
         )
         if metadata is None:
             metadata = []
@@ -1242,7 +1242,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListAnnotationsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1332,7 +1332,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.CreateTagRequest(parent=parent, tag=tag)
+        request = incidents_service_pb2.CreateTagRequest(parent=parent, tag=tag,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1398,7 +1398,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteTagRequest(name=name)
+        request = incidents_service_pb2.DeleteTagRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1490,7 +1490,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListTagsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1581,7 +1581,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateSignalRequest(
-            parent=parent, signal=signal
+            parent=parent, signal=signal,
         )
         if metadata is None:
             metadata = []
@@ -1739,7 +1739,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchSignalsRequest(
-            parent=parent, query=query, page_size=page_size
+            parent=parent, query=query, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1888,7 +1888,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.GetSignalRequest(name=name)
+        request = incidents_service_pb2.GetSignalRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1968,7 +1968,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateSignalRequest(
-            signal=signal, update_mask=update_mask
+            signal=signal, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2155,7 +2155,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateArtifactRequest(
-            parent=parent, artifact=artifact
+            parent=parent, artifact=artifact,
         )
         if metadata is None:
             metadata = []
@@ -2248,7 +2248,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListArtifactsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -2339,7 +2339,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateArtifactRequest(
-            artifact=artifact, update_mask=update_mask
+            artifact=artifact, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2527,7 +2527,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateSubscriptionRequest(
-            parent=parent, subscription=subscription
+            parent=parent, subscription=subscription,
         )
         if metadata is None:
             metadata = []
@@ -2607,7 +2607,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateSubscriptionRequest(
-            subscription=subscription, update_mask=update_mask
+            subscription=subscription, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2700,7 +2700,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListSubscriptionsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -2778,7 +2778,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteSubscriptionRequest(name=name)
+        request = incidents_service_pb2.DeleteSubscriptionRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -2865,7 +2865,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateIncidentRoleAssignmentRequest(
-            parent=parent, incident_role_assignment=incident_role_assignment
+            parent=parent, incident_role_assignment=incident_role_assignment,
         )
         if metadata is None:
             metadata = []
@@ -2936,7 +2936,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteIncidentRoleAssignmentRequest(name=name)
+        request = incidents_service_pb2.DeleteIncidentRoleAssignmentRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -3030,7 +3030,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListIncidentRoleAssignmentsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -3126,7 +3126,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CancelIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []

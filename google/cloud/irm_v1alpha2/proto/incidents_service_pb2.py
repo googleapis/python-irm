@@ -130,7 +130,7 @@ _GETINCIDENTREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -310,7 +310,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE_RESULT = _descriptor.Descriptor(
             serialized_options=None,
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -372,7 +372,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE = _descriptor.Descriptor(
         ),
     ],
     extensions=[],
-    nested_types=[_SEARCHSIMILARINCIDENTSRESPONSE_RESULT],
+    nested_types=[_SEARCHSIMILARINCIDENTSRESPONSE_RESULT,],
     enum_types=[],
     serialized_options=None,
     is_extendable=False,
@@ -669,7 +669,7 @@ _DELETETAGREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A\030\n\026irm.googleapis.com/Tag",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -1067,7 +1067,7 @@ _GETSIGNALREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A\033\n\031irm.googleapis.com/Signal",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -1144,7 +1144,7 @@ _LOOKUPSIGNALREQUEST = _descriptor.Descriptor(
             containing_type=None,
             create_key=_descriptor._internal_create_key,
             fields=[],
-        )
+        ),
     ],
     serialized_start=2274,
     serialized_end=2374,
@@ -1926,7 +1926,7 @@ _DELETEARTIFACTREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Artifact",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -1967,7 +1967,7 @@ _SENDSHIFTHANDOFFREQUEST_INCIDENT = _descriptor.Descriptor(
             serialized_options=b"\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -2143,7 +2143,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
         ),
     ],
     extensions=[],
-    nested_types=[_SENDSHIFTHANDOFFREQUEST_INCIDENT],
+    nested_types=[_SENDSHIFTHANDOFFREQUEST_INCIDENT,],
     enum_types=[],
     serialized_options=None,
     is_extendable=False,
@@ -2500,7 +2500,7 @@ _DELETESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A!\n\037irm.googleapis.com/Subscription",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -2601,7 +2601,7 @@ _DELETEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
             create_key=_descriptor._internal_create_key,
-        )
+        ),
     ],
     extensions=[],
     nested_types=[],
