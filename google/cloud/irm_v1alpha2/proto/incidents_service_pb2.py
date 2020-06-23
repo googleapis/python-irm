@@ -29,6 +29,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     package="google.cloud.irm.v1alpha2",
     syntax="proto3",
     serialized_options=b"\n#com.google.irm.service.v1alpha2.apiP\001Z<google.golang.org/genproto/googleapis/cloud/irm/v1alpha2;irm\370\001\001",
+    create_key=_descriptor._internal_create_key,
     serialized_pb=b'\n7google/cloud/irm_v1alpha2/proto/incidents_service.proto\x12\x19google.cloud.irm.v1alpha2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a/google/cloud/irm_v1alpha2/proto/incidents.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x98\x01\n\x15\x43reateIncidentRequest\x12:\n\x08incident\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.IncidentB\x03\xe0\x41\x02\x12\x43\n\x06parent\x18\x02 \x01(\tB3\xe0\x41\x02\xfa\x41-\n+cloudresourcemanager.googleapis.com/Project"G\n\x12GetIncidentRequest\x12\x31\n\x04name\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident"\x84\x01\n\x15UpdateIncidentRequest\x12:\n\x08incident\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.IncidentB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask"y\n\x1dSearchSimilarIncidentsRequest\x12\x31\n\x04name\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\xcd\x01\n\x1eSearchSimilarIncidentsResponse\x12Q\n\x07results\x18\x01 \x03(\x0b\x32@.google.cloud.irm.v1alpha2.SearchSimilarIncidentsResponse.Result\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x1a?\n\x06Result\x12\x35\n\x08incident\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.Incident"\x8e\x01\n\x17\x43reateAnnotationRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12>\n\nannotation\x18\x02 \x01(\x0b\x32%.google.cloud.irm.v1alpha2.AnnotationB\x03\xe0\x41\x02"t\n\x16ListAnnotationsRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"n\n\x17ListAnnotationsResponse\x12:\n\x0b\x61nnotations\x18\x01 \x03(\x0b\x32%.google.cloud.irm.v1alpha2.Annotation\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"y\n\x10\x43reateTagRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x30\n\x03tag\x18\x02 \x01(\x0b\x32\x1e.google.cloud.irm.v1alpha2.TagB\x03\xe0\x41\x02"@\n\x10\x44\x65leteTagRequest\x12,\n\x04name\x18\x01 \x01(\tB\x1e\xe0\x41\x02\xfa\x41\x18\n\x16irm.googleapis.com/Tag"m\n\x0fListTagsRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"Y\n\x10ListTagsResponse\x12,\n\x04tags\x18\x01 \x03(\x0b\x32\x1e.google.cloud.irm.v1alpha2.Tag\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x92\x01\n\x13\x43reateSignalRequest\x12\x43\n\x06parent\x18\x01 \x01(\tB3\xe0\x41\x02\xfa\x41-\n+cloudresourcemanager.googleapis.com/Project\x12\x36\n\x06signal\x18\x02 \x01(\x0b\x32!.google.cloud.irm.v1alpha2.SignalB\x03\xe0\x41\x02"\x91\x01\n\x14SearchSignalsRequest\x12\x43\n\x06parent\x18\x01 \x01(\tB3\xe0\x41\x02\xfa\x41-\n+cloudresourcemanager.googleapis.com/Project\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t"d\n\x15SearchSignalsResponse\x12\x32\n\x07signals\x18\x01 \x03(\x0b\x32!.google.cloud.irm.v1alpha2.Signal\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"C\n\x10GetSignalRequest\x12/\n\x04name\x18\x01 \x01(\tB!\xe0\x41\x02\xfa\x41\x1b\n\x19irm.googleapis.com/Signal"d\n\x13LookupSignalRequest\x12\x16\n\x0c\x63scc_finding\x18\x02 \x01(\tH\x00\x12%\n\x1bstackdriver_notification_id\x18\x03 \x01(\tH\x00\x42\x0e\n\x0c\x61lternate_id"~\n\x13UpdateSignalRequest\x12\x36\n\x06signal\x18\x01 \x01(\x0b\x32!.google.cloud.irm.v1alpha2.SignalB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask"\xa6\x01\n\x16SearchIncidentsRequest\x12\x43\n\x06parent\x18\x01 \x01(\tB3\xe0\x41\x02\xfa\x41-\n+cloudresourcemanager.googleapis.com/Project\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t\x12\x11\n\ttime_zone\x18\x05 \x01(\t"j\n\x17SearchIncidentsResponse\x12\x36\n\tincidents\x18\x01 \x03(\x0b\x32#.google.cloud.irm.v1alpha2.Incident\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xee\x02\n\x17\x45scalateIncidentRequest\x12:\n\x08incident\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.IncidentB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\x12>\n\rsubscriptions\x18\x03 \x03(\x0b\x32\'.google.cloud.irm.v1alpha2.Subscription\x12,\n\x04tags\x18\x04 \x03(\x0b\x32\x1e.google.cloud.irm.v1alpha2.Tag\x12@\n\x05roles\x18\x05 \x03(\x0b\x32\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment\x12\x36\n\tartifacts\x18\x06 \x03(\x0b\x32#.google.cloud.irm.v1alpha2.Artifact"\xaf\x02\n\x18\x45scalateIncidentResponse\x12\x35\n\x08incident\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.Incident\x12>\n\rsubscriptions\x18\x02 \x03(\x0b\x32\'.google.cloud.irm.v1alpha2.Subscription\x12,\n\x04tags\x18\x03 \x03(\x0b\x32\x1e.google.cloud.irm.v1alpha2.Tag\x12\x36\n\x05roles\x18\x04 \x03(\x0b\x32\'.google.cloud.irm.v1alpha2.IncidentRole\x12\x36\n\tartifacts\x18\x05 \x03(\x0b\x32#.google.cloud.irm.v1alpha2.Artifact"\x88\x01\n\x15\x43reateArtifactRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12:\n\x08\x61rtifact\x18\x02 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.ArtifactB\x03\xe0\x41\x02"r\n\x14ListArtifactsRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"h\n\x15ListArtifactsResponse\x12\x36\n\tartifacts\x18\x01 \x03(\x0b\x32#.google.cloud.irm.v1alpha2.Artifact\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x84\x01\n\x15UpdateArtifactRequest\x12:\n\x08\x61rtifact\x18\x01 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.ArtifactB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask"J\n\x15\x44\x65leteArtifactRequest\x12\x31\n\x04name\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Artifact"\xfd\x02\n\x17SendShiftHandoffRequest\x12\x43\n\x06parent\x18\x01 \x01(\tB3\xe0\x41\x02\xfa\x41-\n+cloudresourcemanager.googleapis.com/Project\x12\x17\n\nrecipients\x18\x02 \x03(\tB\x03\xe0\x41\x02\x12\x0f\n\x02\x63\x63\x18\x03 \x03(\tB\x03\xe0\x41\x01\x12\x14\n\x07subject\x18\x04 \x01(\tB\x03\xe0\x41\x02\x12\x1a\n\x12notes_content_type\x18\x05 \x01(\t\x12\x1a\n\rnotes_content\x18\x06 \x01(\tB\x03\xe0\x41\x01\x12S\n\tincidents\x18\x07 \x03(\x0b\x32;.google.cloud.irm.v1alpha2.SendShiftHandoffRequest.IncidentB\x03\xe0\x41\x01\x12\x14\n\x0cpreview_only\x18\x08 \x01(\x08\x1a:\n\x08Incident\x12.\n\x04name\x18\x01 \x01(\tB \xfa\x41\x1d\n\x1birm.googleapis.com/Incident"A\n\x18SendShiftHandoffResponse\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t"\x94\x01\n\x19\x43reateSubscriptionRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x42\n\x0csubscription\x18\x02 \x01(\x0b\x32\'.google.cloud.irm.v1alpha2.SubscriptionB\x03\xe0\x41\x02"\x90\x01\n\x19UpdateSubscriptionRequest\x12\x42\n\x0csubscription\x18\x01 \x01(\x0b\x32\'.google.cloud.irm.v1alpha2.SubscriptionB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask"v\n\x18ListSubscriptionsRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"t\n\x19ListSubscriptionsResponse\x12>\n\rsubscriptions\x18\x01 \x03(\x0b\x32\'.google.cloud.irm.v1alpha2.Subscription\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"R\n\x19\x44\x65leteSubscriptionRequest\x12\x35\n\x04name\x18\x01 \x01(\tB\'\xe0\x41\x02\xfa\x41!\n\x1firm.googleapis.com/Subscription"\xb4\x01\n#CreateIncidentRoleAssignmentRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12X\n\x18incident_role_assignment\x18\x02 \x01(\x0b\x32\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignmentB\x03\xe0\x41\x02"X\n#DeleteIncidentRoleAssignmentRequest\x12\x31\n\x04name\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident"\x80\x01\n"ListIncidentRoleAssignmentsRequest\x12\x33\n\x06parent\x18\x01 \x01(\tB#\xe0\x41\x02\xfa\x41\x1d\n\x1birm.googleapis.com/Incident\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x94\x01\n#ListIncidentRoleAssignmentsResponse\x12T\n\x19incident_role_assignments\x18\x01 \x03(\x0b\x32\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"s\n"RequestIncidentRoleHandoverRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12:\n\x0cnew_assignee\x18\x02 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.UserB\x03\xe0\x41\x02"\xa1\x01\n"ConfirmIncidentRoleHandoverRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0\x41\x02\xfa\x41+\n)irm.googleapis.com/IncidentRoleAssignment\x12:\n\x0cnew_assignee\x18\x02 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.UserB\x03\xe0\x41\x02"\x9f\x01\n ForceIncidentRoleHandoverRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0\x41\x02\xfa\x41+\n)irm.googleapis.com/IncidentRoleAssignment\x12:\n\x0cnew_assignee\x18\x02 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.UserB\x03\xe0\x41\x02"\xa0\x01\n!CancelIncidentRoleHandoverRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0\x41\x02\xfa\x41+\n)irm.googleapis.com/IncidentRoleAssignment\x12:\n\x0cnew_assignee\x18\x02 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.UserB\x03\xe0\x41\x02\x32\xb9\x32\n\x0fIncidentService\x12\xb4\x01\n\x0e\x43reateIncident\x12\x30.google.cloud.irm.v1alpha2.CreateIncidentRequest\x1a#.google.cloud.irm.v1alpha2.Incident"K\x82\xd3\xe4\x93\x02\x33"\'/v1alpha2/{parent=projects/*}/incidents:\x08incident\xda\x41\x0fincident,parent\x12\x99\x01\n\x0bGetIncident\x12-.google.cloud.irm.v1alpha2.GetIncidentRequest\x1a#.google.cloud.irm.v1alpha2.Incident"6\x82\xd3\xe4\x93\x02)\x12\'/v1alpha2/{name=projects/*/incidents/*}\xda\x41\x04name\x12\xc9\x01\n\x0fSearchIncidents\x12\x31.google.cloud.irm.v1alpha2.SearchIncidentsRequest\x1a\x32.google.cloud.irm.v1alpha2.SearchIncidentsResponse"O\x82\xd3\xe4\x93\x02\x30\x12./v1alpha2/{parent=projects/*}/incidents:search\xda\x41\x16parent,query,time_zone\x12\xc2\x01\n\x0eUpdateIncident\x12\x30.google.cloud.irm.v1alpha2.UpdateIncidentRequest\x1a#.google.cloud.irm.v1alpha2.Incident"Y\x82\xd3\xe4\x93\x02<20/v1alpha2/{incident.name=projects/*/incidents/*}:\x08incident\xda\x41\x14incident,update_mask\x12\x94\x02\n\x16SearchSimilarIncidents\x12\x38.google.cloud.irm.v1alpha2.SearchSimilarIncidentsRequest\x1a\x39.google.cloud.irm.v1alpha2.SearchSimilarIncidentsResponse"\x84\x01\x82\xd3\xe4\x93\x02w\x12\x35/v1alpha2/{name=projects/*/incidents/*}:searchSimilarZ>\x12</v1alpha2/{name=projects/*/signals/*}:searchSimilarIncidents\xda\x41\x04name\x12\xcc\x01\n\x10\x43reateAnnotation\x12\x32.google.cloud.irm.v1alpha2.CreateAnnotationRequest\x1a%.google.cloud.irm.v1alpha2.Annotation"]\x82\xd3\xe4\x93\x02\x43"5/v1alpha2/{parent=projects/*/incidents/*}/annotations:\nannotation\xda\x41\x11parent,annotation\x12\xc0\x01\n\x0fListAnnotations\x12\x31.google.cloud.irm.v1alpha2.ListAnnotationsRequest\x1a\x32.google.cloud.irm.v1alpha2.ListAnnotationsResponse"F\x82\xd3\xe4\x93\x02\x37\x12\x35/v1alpha2/{parent=projects/*/incidents/*}/annotations\xda\x41\x06parent\x12\xa2\x01\n\tCreateTag\x12+.google.cloud.irm.v1alpha2.CreateTagRequest\x1a\x1e.google.cloud.irm.v1alpha2.Tag"H\x82\xd3\xe4\x93\x02\x35"./v1alpha2/{parent=projects/*/incidents/*}/tags:\x03tag\xda\x41\nparent,tag\x12\x8f\x01\n\tDeleteTag\x12+.google.cloud.irm.v1alpha2.DeleteTagRequest\x1a\x16.google.protobuf.Empty"=\x82\xd3\xe4\x93\x02\x30*./v1alpha2/{name=projects/*/incidents/*/tags/*}\xda\x41\x04name\x12\xa4\x01\n\x08ListTags\x12*.google.cloud.irm.v1alpha2.ListTagsRequest\x1a+.google.cloud.irm.v1alpha2.ListTagsResponse"?\x82\xd3\xe4\x93\x02\x30\x12./v1alpha2/{parent=projects/*/incidents/*}/tags\xda\x41\x06parent\x12\xa8\x01\n\x0c\x43reateSignal\x12..google.cloud.irm.v1alpha2.CreateSignalRequest\x1a!.google.cloud.irm.v1alpha2.Signal"E\x82\xd3\xe4\x93\x02/"%/v1alpha2/{parent=projects/*}/signals:\x06signal\xda\x41\rparent,signal\x12\xb7\x01\n\rSearchSignals\x12/.google.cloud.irm.v1alpha2.SearchSignalsRequest\x1a\x30.google.cloud.irm.v1alpha2.SearchSignalsResponse"C\x82\xd3\xe4\x93\x02.\x12,/v1alpha2/{parent=projects/*}/signals:search\xda\x41\x0cparent,query\x12\x83\x01\n\x0cLookupSignal\x12..google.cloud.irm.v1alpha2.LookupSignalRequest\x1a!.google.cloud.irm.v1alpha2.Signal" \x82\xd3\xe4\x93\x02\x1a\x12\x18/v1alpha2/signals:lookup\x12\x91\x01\n\tGetSignal\x12+.google.cloud.irm.v1alpha2.GetSignalRequest\x1a!.google.cloud.irm.v1alpha2.Signal"4\x82\xd3\xe4\x93\x02\'\x12%/v1alpha2/{name=projects/*/signals/*}\xda\x41\x04name\x12\xb4\x01\n\x0cUpdateSignal\x12..google.cloud.irm.v1alpha2.UpdateSignalRequest\x1a!.google.cloud.irm.v1alpha2.Signal"Q\x82\xd3\xe4\x93\x02\x36\x32,/v1alpha2/{signal.name=projects/*/signals/*}:\x06signal\xda\x41\x12signal,update_mask\x12\xc1\x01\n\x10\x45scalateIncident\x12\x32.google.cloud.irm.v1alpha2.EscalateIncidentRequest\x1a\x33.google.cloud.irm.v1alpha2.EscalateIncidentResponse"D\x82\xd3\xe4\x93\x02>"9/v1alpha2/{incident.name=projects/*/incidents/*}:escalate:\x01*\x12\xc0\x01\n\x0e\x43reateArtifact\x12\x30.google.cloud.irm.v1alpha2.CreateArtifactRequest\x1a#.google.cloud.irm.v1alpha2.Artifact"W\x82\xd3\xe4\x93\x02?"3/v1alpha2/{parent=projects/*/incidents/*}/artifacts:\x08\x61rtifact\xda\x41\x0fparent,artifact\x12\xb8\x01\n\rListArtifacts\x12/.google.cloud.irm.v1alpha2.ListArtifactsRequest\x1a\x30.google.cloud.irm.v1alpha2.ListArtifactsResponse"D\x82\xd3\xe4\x93\x02\x35\x12\x33/v1alpha2/{parent=projects/*/incidents/*}/artifacts\xda\x41\x06parent\x12\xce\x01\n\x0eUpdateArtifact\x12\x30.google.cloud.irm.v1alpha2.UpdateArtifactRequest\x1a#.google.cloud.irm.v1alpha2.Artifact"e\x82\xd3\xe4\x93\x02H2</v1alpha2/{artifact.name=projects/*/incidents/*/artifacts/*}:\x08\x61rtifact\xda\x41\x14\x61rtifact,update_mask\x12\x9e\x01\n\x0e\x44\x65leteArtifact\x12\x30.google.cloud.irm.v1alpha2.DeleteArtifactRequest\x1a\x16.google.protobuf.Empty"B\x82\xd3\xe4\x93\x02\x35*3/v1alpha2/{name=projects/*/incidents/*/artifacts/*}\xda\x41\x04name\x12\xb7\x01\n\x10SendShiftHandoff\x12\x32.google.cloud.irm.v1alpha2.SendShiftHandoffRequest\x1a\x33.google.cloud.irm.v1alpha2.SendShiftHandoffResponse":\x82\xd3\xe4\x93\x02\x34"//v1alpha2/{parent=projects/*}/shiftHandoff:send:\x01*\x12\xd8\x01\n\x12\x43reateSubscription\x12\x34.google.cloud.irm.v1alpha2.CreateSubscriptionRequest\x1a\'.google.cloud.irm.v1alpha2.Subscription"c\x82\xd3\xe4\x93\x02G"7/v1alpha2/{parent=projects/*/incidents/*}/subscriptions:\x0csubscription\xda\x41\x13parent,subscription\x12\xea\x01\n\x12UpdateSubscription\x12\x34.google.cloud.irm.v1alpha2.UpdateSubscriptionRequest\x1a\'.google.cloud.irm.v1alpha2.Subscription"u\x82\xd3\xe4\x93\x02T2D/v1alpha2/{subscription.name=projects/*/incidents/*/subscriptions/*}:\x0csubscription\xda\x41\x18subscription,update_mask\x12\xc8\x01\n\x11ListSubscriptions\x12\x33.google.cloud.irm.v1alpha2.ListSubscriptionsRequest\x1a\x34.google.cloud.irm.v1alpha2.ListSubscriptionsResponse"H\x82\xd3\xe4\x93\x02\x39\x12\x37/v1alpha2/{parent=projects/*/incidents/*}/subscriptions\xda\x41\x06parent\x12\xaa\x01\n\x12\x44\x65leteSubscription\x12\x34.google.cloud.irm.v1alpha2.DeleteSubscriptionRequest\x1a\x16.google.protobuf.Empty"F\x82\xd3\xe4\x93\x02\x39*7/v1alpha2/{name=projects/*/incidents/*/subscriptions/*}\xda\x41\x04name\x12\xf9\x01\n\x1c\x43reateIncidentRoleAssignment\x12>.google.cloud.irm.v1alpha2.CreateIncidentRoleAssignmentRequest\x1a\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment"f\x82\xd3\xe4\x93\x02>"9/v1alpha2/{parent=projects/*/incidents/*}/roleAssignments:\x01*\xda\x41\x1fparent,incident_role_assignment\x12\xc0\x01\n\x1c\x44\x65leteIncidentRoleAssignment\x12>.google.cloud.irm.v1alpha2.DeleteIncidentRoleAssignmentRequest\x1a\x16.google.protobuf.Empty"H\x82\xd3\xe4\x93\x02;*9/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}\xda\x41\x04name\x12\xe8\x01\n\x1bListIncidentRoleAssignments\x12=.google.cloud.irm.v1alpha2.ListIncidentRoleAssignmentsRequest\x1a>.google.cloud.irm.v1alpha2.ListIncidentRoleAssignmentsResponse"J\x82\xd3\xe4\x93\x02;\x12\x39/v1alpha2/{parent=projects/*/incidents/*}/roleAssignments\xda\x41\x06parent\x12\xf9\x01\n\x1bRequestIncidentRoleHandover\x12=.google.cloud.irm.v1alpha2.RequestIncidentRoleHandoverRequest\x1a\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment"h\x82\xd3\xe4\x93\x02N"I/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:requestHandover:\x01*\xda\x41\x11name,new_assignee\x12\xf9\x01\n\x1b\x43onfirmIncidentRoleHandover\x12=.google.cloud.irm.v1alpha2.ConfirmIncidentRoleHandoverRequest\x1a\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment"h\x82\xd3\xe4\x93\x02N"I/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:confirmHandover:\x01*\xda\x41\x11name,new_assignee\x12\xf3\x01\n\x19\x46orceIncidentRoleHandover\x12;.google.cloud.irm.v1alpha2.ForceIncidentRoleHandoverRequest\x1a\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment"f\x82\xd3\xe4\x93\x02L"G/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:forceHandover:\x01*\xda\x41\x11name,new_assignee\x12\xf6\x01\n\x1a\x43\x61ncelIncidentRoleHandover\x12<.google.cloud.irm.v1alpha2.CancelIncidentRoleHandoverRequest\x1a\x31.google.cloud.irm.v1alpha2.IncidentRoleAssignment"g\x82\xd3\xe4\x93\x02M"H/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:cancelHandover:\x01*\xda\x41\x11name,new_assignee\x1a\x46\xca\x41\x12irm.googleapis.com\xd2\x41.https://www.googleapis.com/auth/cloud-platformBh\n#com.google.irm.service.v1alpha2.apiP\x01Z<google.golang.org/genproto/googleapis/cloud/irm/v1alpha2;irm\xf8\x01\x01\x62\x06proto3',
     dependencies=[
         google_dot_api_dot_annotations__pb2.DESCRIPTOR,
@@ -49,6 +50,7 @@ _CREATEINCIDENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident",
@@ -67,6 +69,7 @@ _CREATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="parent",
@@ -85,6 +88,7 @@ _CREATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A-\n+cloudresourcemanager.googleapis.com/Project",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -106,6 +110,7 @@ _GETINCIDENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -124,6 +129,7 @@ _GETINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -145,6 +151,7 @@ _UPDATEINCIDENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident",
@@ -163,6 +170,7 @@ _UPDATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_mask",
@@ -181,6 +189,7 @@ _UPDATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -202,6 +211,7 @@ _SEARCHSIMILARINCIDENTSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -220,6 +230,7 @@ _SEARCHSIMILARINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -238,6 +249,7 @@ _SEARCHSIMILARINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -256,6 +268,7 @@ _SEARCHSIMILARINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -277,6 +290,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE_RESULT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident",
@@ -295,6 +309,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE_RESULT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -315,6 +330,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="results",
@@ -333,6 +349,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -351,6 +368,7 @@ _SEARCHSIMILARINCIDENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -372,6 +390,7 @@ _CREATEANNOTATIONREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -390,6 +409,7 @@ _CREATEANNOTATIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="annotation",
@@ -408,6 +428,7 @@ _CREATEANNOTATIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -429,6 +450,7 @@ _LISTANNOTATIONSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -447,6 +469,7 @@ _LISTANNOTATIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -465,6 +488,7 @@ _LISTANNOTATIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -483,6 +507,7 @@ _LISTANNOTATIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -504,6 +529,7 @@ _LISTANNOTATIONSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="annotations",
@@ -522,6 +548,7 @@ _LISTANNOTATIONSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -540,6 +567,7 @@ _LISTANNOTATIONSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -561,6 +589,7 @@ _CREATETAGREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -579,6 +608,7 @@ _CREATETAGREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="tag",
@@ -597,6 +627,7 @@ _CREATETAGREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -618,6 +649,7 @@ _DELETETAGREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -636,6 +668,7 @@ _DELETETAGREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\030\n\026irm.googleapis.com/Tag",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -657,6 +690,7 @@ _LISTTAGSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -675,6 +709,7 @@ _LISTTAGSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -693,6 +728,7 @@ _LISTTAGSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -711,6 +747,7 @@ _LISTTAGSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -732,6 +769,7 @@ _LISTTAGSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="tags",
@@ -750,6 +788,7 @@ _LISTTAGSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -768,6 +807,7 @@ _LISTTAGSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -789,6 +829,7 @@ _CREATESIGNALREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -807,6 +848,7 @@ _CREATESIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A-\n+cloudresourcemanager.googleapis.com/Project",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="signal",
@@ -825,6 +867,7 @@ _CREATESIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -846,6 +889,7 @@ _SEARCHSIGNALSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -864,6 +908,7 @@ _SEARCHSIGNALSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A-\n+cloudresourcemanager.googleapis.com/Project",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="query",
@@ -882,6 +927,7 @@ _SEARCHSIGNALSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -900,6 +946,7 @@ _SEARCHSIGNALSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -918,6 +965,7 @@ _SEARCHSIGNALSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -939,6 +987,7 @@ _SEARCHSIGNALSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="signals",
@@ -957,6 +1006,7 @@ _SEARCHSIGNALSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -975,6 +1025,7 @@ _SEARCHSIGNALSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -996,6 +1047,7 @@ _GETSIGNALREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1014,6 +1066,7 @@ _GETSIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\033\n\031irm.googleapis.com/Signal",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1035,6 +1088,7 @@ _LOOKUPSIGNALREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="cscc_finding",
@@ -1053,6 +1107,7 @@ _LOOKUPSIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="stackdriver_notification_id",
@@ -1071,6 +1126,7 @@ _LOOKUPSIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1086,6 +1142,7 @@ _LOOKUPSIGNALREQUEST = _descriptor.Descriptor(
             full_name="google.cloud.irm.v1alpha2.LookupSignalRequest.alternate_id",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -1100,6 +1157,7 @@ _UPDATESIGNALREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="signal",
@@ -1118,6 +1176,7 @@ _UPDATESIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_mask",
@@ -1136,6 +1195,7 @@ _UPDATESIGNALREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1157,6 +1217,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -1175,6 +1236,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A-\n+cloudresourcemanager.googleapis.com/Project",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="query",
@@ -1193,6 +1255,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -1211,6 +1274,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -1229,6 +1293,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="time_zone",
@@ -1247,6 +1312,7 @@ _SEARCHINCIDENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1268,6 +1334,7 @@ _SEARCHINCIDENTSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incidents",
@@ -1286,6 +1353,7 @@ _SEARCHINCIDENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -1304,6 +1372,7 @@ _SEARCHINCIDENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1325,6 +1394,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident",
@@ -1343,6 +1413,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_mask",
@@ -1361,6 +1432,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="subscriptions",
@@ -1379,6 +1451,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="tags",
@@ -1397,6 +1470,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="roles",
@@ -1415,6 +1489,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="artifacts",
@@ -1433,6 +1508,7 @@ _ESCALATEINCIDENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1454,6 +1530,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident",
@@ -1472,6 +1549,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="subscriptions",
@@ -1490,6 +1568,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="tags",
@@ -1508,6 +1587,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="roles",
@@ -1526,6 +1606,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="artifacts",
@@ -1544,6 +1625,7 @@ _ESCALATEINCIDENTRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1565,6 +1647,7 @@ _CREATEARTIFACTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -1583,6 +1666,7 @@ _CREATEARTIFACTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="artifact",
@@ -1601,6 +1685,7 @@ _CREATEARTIFACTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1622,6 +1707,7 @@ _LISTARTIFACTSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -1640,6 +1726,7 @@ _LISTARTIFACTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -1658,6 +1745,7 @@ _LISTARTIFACTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -1676,6 +1764,7 @@ _LISTARTIFACTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1697,6 +1786,7 @@ _LISTARTIFACTSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="artifacts",
@@ -1715,6 +1805,7 @@ _LISTARTIFACTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -1733,6 +1824,7 @@ _LISTARTIFACTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1754,6 +1846,7 @@ _UPDATEARTIFACTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="artifact",
@@ -1772,6 +1865,7 @@ _UPDATEARTIFACTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_mask",
@@ -1790,6 +1884,7 @@ _UPDATEARTIFACTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1811,6 +1906,7 @@ _DELETEARTIFACTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1829,6 +1925,7 @@ _DELETEARTIFACTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Artifact",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1850,6 +1947,7 @@ _SENDSHIFTHANDOFFREQUEST_INCIDENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1868,6 +1966,7 @@ _SENDSHIFTHANDOFFREQUEST_INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1888,6 +1987,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -1906,6 +2006,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A-\n+cloudresourcemanager.googleapis.com/Project",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="recipients",
@@ -1924,6 +2025,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="cc",
@@ -1942,6 +2044,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="subject",
@@ -1960,6 +2063,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="notes_content_type",
@@ -1978,6 +2082,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="notes_content",
@@ -1996,6 +2101,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="incidents",
@@ -2014,6 +2120,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="preview_only",
@@ -2032,6 +2139,7 @@ _SENDSHIFTHANDOFFREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2053,6 +2161,7 @@ _SENDSHIFTHANDOFFRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="content_type",
@@ -2071,6 +2180,7 @@ _SENDSHIFTHANDOFFRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content",
@@ -2089,6 +2199,7 @@ _SENDSHIFTHANDOFFRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2110,6 +2221,7 @@ _CREATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -2128,6 +2240,7 @@ _CREATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="subscription",
@@ -2146,6 +2259,7 @@ _CREATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2167,6 +2281,7 @@ _UPDATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="subscription",
@@ -2185,6 +2300,7 @@ _UPDATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_mask",
@@ -2203,6 +2319,7 @@ _UPDATESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2224,6 +2341,7 @@ _LISTSUBSCRIPTIONSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -2242,6 +2360,7 @@ _LISTSUBSCRIPTIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -2260,6 +2379,7 @@ _LISTSUBSCRIPTIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -2278,6 +2398,7 @@ _LISTSUBSCRIPTIONSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2299,6 +2420,7 @@ _LISTSUBSCRIPTIONSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="subscriptions",
@@ -2317,6 +2439,7 @@ _LISTSUBSCRIPTIONSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -2335,6 +2458,7 @@ _LISTSUBSCRIPTIONSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2356,6 +2480,7 @@ _DELETESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2374,6 +2499,7 @@ _DELETESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A!\n\037irm.googleapis.com/Subscription",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2395,6 +2521,7 @@ _CREATEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -2413,6 +2540,7 @@ _CREATEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="incident_role_assignment",
@@ -2431,6 +2559,7 @@ _CREATEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2452,6 +2581,7 @@ _DELETEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2470,6 +2600,7 @@ _DELETEINCIDENTROLEASSIGNMENTREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2491,6 +2622,7 @@ _LISTINCIDENTROLEASSIGNMENTSREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="parent",
@@ -2509,6 +2641,7 @@ _LISTINCIDENTROLEASSIGNMENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A\035\n\033irm.googleapis.com/Incident",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_size",
@@ -2527,6 +2660,7 @@ _LISTINCIDENTROLEASSIGNMENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="page_token",
@@ -2545,6 +2679,7 @@ _LISTINCIDENTROLEASSIGNMENTSREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2566,6 +2701,7 @@ _LISTINCIDENTROLEASSIGNMENTSRESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="incident_role_assignments",
@@ -2584,6 +2720,7 @@ _LISTINCIDENTROLEASSIGNMENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="next_page_token",
@@ -2602,6 +2739,7 @@ _LISTINCIDENTROLEASSIGNMENTSRESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2623,6 +2761,7 @@ _REQUESTINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2641,6 +2780,7 @@ _REQUESTINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="new_assignee",
@@ -2659,6 +2799,7 @@ _REQUESTINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2680,6 +2821,7 @@ _CONFIRMINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2698,6 +2840,7 @@ _CONFIRMINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A+\n)irm.googleapis.com/IncidentRoleAssignment",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="new_assignee",
@@ -2716,6 +2859,7 @@ _CONFIRMINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2737,6 +2881,7 @@ _FORCEINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2755,6 +2900,7 @@ _FORCEINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A+\n)irm.googleapis.com/IncidentRoleAssignment",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="new_assignee",
@@ -2773,6 +2919,7 @@ _FORCEINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2794,6 +2941,7 @@ _CANCELINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2812,6 +2960,7 @@ _CANCELINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002\372A+\n)irm.googleapis.com/IncidentRoleAssignment",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="new_assignee",
@@ -2830,6 +2979,7 @@ _CANCELINCIDENTROLEHANDOVERREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -4122,6 +4272,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
     file=DESCRIPTOR,
     index=0,
     serialized_options=b"\312A\022irm.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platform",
+    create_key=_descriptor._internal_create_key,
     serialized_start=6261,
     serialized_end=12718,
     methods=[
@@ -4133,6 +4284,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATEINCIDENTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENT,
             serialized_options=b"\202\323\344\223\0023\"'/v1alpha2/{parent=projects/*}/incidents:\010incident\332A\017incident,parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="GetIncident",
@@ -4142,6 +4294,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_GETINCIDENTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENT,
             serialized_options=b"\202\323\344\223\002)\022'/v1alpha2/{name=projects/*/incidents/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="SearchIncidents",
@@ -4151,6 +4304,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_SEARCHINCIDENTSREQUEST,
             output_type=_SEARCHINCIDENTSRESPONSE,
             serialized_options=b"\202\323\344\223\0020\022./v1alpha2/{parent=projects/*}/incidents:search\332A\026parent,query,time_zone",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="UpdateIncident",
@@ -4160,6 +4314,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_UPDATEINCIDENTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENT,
             serialized_options=b"\202\323\344\223\002<20/v1alpha2/{incident.name=projects/*/incidents/*}:\010incident\332A\024incident,update_mask",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="SearchSimilarIncidents",
@@ -4169,6 +4324,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_SEARCHSIMILARINCIDENTSREQUEST,
             output_type=_SEARCHSIMILARINCIDENTSRESPONSE,
             serialized_options=b"\202\323\344\223\002w\0225/v1alpha2/{name=projects/*/incidents/*}:searchSimilarZ>\022</v1alpha2/{name=projects/*/signals/*}:searchSimilarIncidents\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateAnnotation",
@@ -4178,6 +4334,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATEANNOTATIONREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._ANNOTATION,
             serialized_options=b'\202\323\344\223\002C"5/v1alpha2/{parent=projects/*/incidents/*}/annotations:\nannotation\332A\021parent,annotation',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ListAnnotations",
@@ -4187,6 +4344,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LISTANNOTATIONSREQUEST,
             output_type=_LISTANNOTATIONSRESPONSE,
             serialized_options=b"\202\323\344\223\0027\0225/v1alpha2/{parent=projects/*/incidents/*}/annotations\332A\006parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateTag",
@@ -4196,6 +4354,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATETAGREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._TAG,
             serialized_options=b'\202\323\344\223\0025"./v1alpha2/{parent=projects/*/incidents/*}/tags:\003tag\332A\nparent,tag',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="DeleteTag",
@@ -4205,6 +4364,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_DELETETAGREQUEST,
             output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
             serialized_options=b"\202\323\344\223\0020*./v1alpha2/{name=projects/*/incidents/*/tags/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ListTags",
@@ -4214,6 +4374,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LISTTAGSREQUEST,
             output_type=_LISTTAGSRESPONSE,
             serialized_options=b"\202\323\344\223\0020\022./v1alpha2/{parent=projects/*/incidents/*}/tags\332A\006parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateSignal",
@@ -4223,6 +4384,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATESIGNALREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SIGNAL,
             serialized_options=b'\202\323\344\223\002/"%/v1alpha2/{parent=projects/*}/signals:\006signal\332A\rparent,signal',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="SearchSignals",
@@ -4232,6 +4394,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_SEARCHSIGNALSREQUEST,
             output_type=_SEARCHSIGNALSRESPONSE,
             serialized_options=b"\202\323\344\223\002.\022,/v1alpha2/{parent=projects/*}/signals:search\332A\014parent,query",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="LookupSignal",
@@ -4241,6 +4404,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LOOKUPSIGNALREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SIGNAL,
             serialized_options=b"\202\323\344\223\002\032\022\030/v1alpha2/signals:lookup",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="GetSignal",
@@ -4250,6 +4414,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_GETSIGNALREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SIGNAL,
             serialized_options=b"\202\323\344\223\002'\022%/v1alpha2/{name=projects/*/signals/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="UpdateSignal",
@@ -4259,6 +4424,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_UPDATESIGNALREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SIGNAL,
             serialized_options=b"\202\323\344\223\00262,/v1alpha2/{signal.name=projects/*/signals/*}:\006signal\332A\022signal,update_mask",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="EscalateIncident",
@@ -4268,6 +4434,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_ESCALATEINCIDENTREQUEST,
             output_type=_ESCALATEINCIDENTRESPONSE,
             serialized_options=b'\202\323\344\223\002>"9/v1alpha2/{incident.name=projects/*/incidents/*}:escalate:\001*',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateArtifact",
@@ -4277,6 +4444,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATEARTIFACTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._ARTIFACT,
             serialized_options=b'\202\323\344\223\002?"3/v1alpha2/{parent=projects/*/incidents/*}/artifacts:\010artifact\332A\017parent,artifact',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ListArtifacts",
@@ -4286,6 +4454,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LISTARTIFACTSREQUEST,
             output_type=_LISTARTIFACTSRESPONSE,
             serialized_options=b"\202\323\344\223\0025\0223/v1alpha2/{parent=projects/*/incidents/*}/artifacts\332A\006parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="UpdateArtifact",
@@ -4295,6 +4464,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_UPDATEARTIFACTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._ARTIFACT,
             serialized_options=b"\202\323\344\223\002H2</v1alpha2/{artifact.name=projects/*/incidents/*/artifacts/*}:\010artifact\332A\024artifact,update_mask",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="DeleteArtifact",
@@ -4304,6 +4474,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_DELETEARTIFACTREQUEST,
             output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
             serialized_options=b"\202\323\344\223\0025*3/v1alpha2/{name=projects/*/incidents/*/artifacts/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="SendShiftHandoff",
@@ -4313,6 +4484,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_SENDSHIFTHANDOFFREQUEST,
             output_type=_SENDSHIFTHANDOFFRESPONSE,
             serialized_options=b'\202\323\344\223\0024"//v1alpha2/{parent=projects/*}/shiftHandoff:send:\001*',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateSubscription",
@@ -4322,6 +4494,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATESUBSCRIPTIONREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SUBSCRIPTION,
             serialized_options=b'\202\323\344\223\002G"7/v1alpha2/{parent=projects/*/incidents/*}/subscriptions:\014subscription\332A\023parent,subscription',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="UpdateSubscription",
@@ -4331,6 +4504,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_UPDATESUBSCRIPTIONREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._SUBSCRIPTION,
             serialized_options=b"\202\323\344\223\002T2D/v1alpha2/{subscription.name=projects/*/incidents/*/subscriptions/*}:\014subscription\332A\030subscription,update_mask",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ListSubscriptions",
@@ -4340,6 +4514,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LISTSUBSCRIPTIONSREQUEST,
             output_type=_LISTSUBSCRIPTIONSRESPONSE,
             serialized_options=b"\202\323\344\223\0029\0227/v1alpha2/{parent=projects/*/incidents/*}/subscriptions\332A\006parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="DeleteSubscription",
@@ -4349,6 +4524,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_DELETESUBSCRIPTIONREQUEST,
             output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
             serialized_options=b"\202\323\344\223\0029*7/v1alpha2/{name=projects/*/incidents/*/subscriptions/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CreateIncidentRoleAssignment",
@@ -4358,6 +4534,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CREATEINCIDENTROLEASSIGNMENTREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENTROLEASSIGNMENT,
             serialized_options=b'\202\323\344\223\002>"9/v1alpha2/{parent=projects/*/incidents/*}/roleAssignments:\001*\332A\037parent,incident_role_assignment',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="DeleteIncidentRoleAssignment",
@@ -4367,6 +4544,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_DELETEINCIDENTROLEASSIGNMENTREQUEST,
             output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
             serialized_options=b"\202\323\344\223\002;*9/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}\332A\004name",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ListIncidentRoleAssignments",
@@ -4376,6 +4554,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_LISTINCIDENTROLEASSIGNMENTSREQUEST,
             output_type=_LISTINCIDENTROLEASSIGNMENTSRESPONSE,
             serialized_options=b"\202\323\344\223\002;\0229/v1alpha2/{parent=projects/*/incidents/*}/roleAssignments\332A\006parent",
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="RequestIncidentRoleHandover",
@@ -4385,6 +4564,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_REQUESTINCIDENTROLEHANDOVERREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENTROLEASSIGNMENT,
             serialized_options=b'\202\323\344\223\002N"I/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:requestHandover:\001*\332A\021name,new_assignee',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ConfirmIncidentRoleHandover",
@@ -4394,6 +4574,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CONFIRMINCIDENTROLEHANDOVERREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENTROLEASSIGNMENT,
             serialized_options=b'\202\323\344\223\002N"I/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:confirmHandover:\001*\332A\021name,new_assignee',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="ForceIncidentRoleHandover",
@@ -4403,6 +4584,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_FORCEINCIDENTROLEHANDOVERREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENTROLEASSIGNMENT,
             serialized_options=b'\202\323\344\223\002L"G/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:forceHandover:\001*\332A\021name,new_assignee',
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
             name="CancelIncidentRoleHandover",
@@ -4412,6 +4594,7 @@ _INCIDENTSERVICE = _descriptor.ServiceDescriptor(
             input_type=_CANCELINCIDENTROLEHANDOVERREQUEST,
             output_type=google_dot_cloud_dot_irm__v1alpha2_dot_proto_dot_incidents__pb2._INCIDENTROLEASSIGNMENT,
             serialized_options=b'\202\323\344\223\002M"H/v1alpha2/{name=projects/*/incidents/*/roleAssignments/*}:cancelHandover:\001*\332A\021name,new_assignee',
+            create_key=_descriptor._internal_create_key,
         ),
     ],
 )

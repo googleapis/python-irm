@@ -23,6 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     package="google.cloud.irm.v1alpha2",
     syntax="proto3",
     serialized_options=b"\n#com.google.irm.service.v1alpha2.apiP\001Z<google.golang.org/genproto/googleapis/cloud/irm/v1alpha2;irm\370\001\001",
+    create_key=_descriptor._internal_create_key,
     serialized_pb=b'\n/google/cloud/irm_v1alpha2/proto/incidents.proto\x12\x19google.cloud.irm.v1alpha2\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1fgoogle/protobuf/timestamp.proto"2\n\x04User\x12\x11\n\x07user_id\x18\x01 \x01(\tH\x00\x12\x0f\n\x05\x65mail\x18\x02 \x01(\tH\x00\x42\x06\n\x04user"\x87\x05\n\x06Signal\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x65tag\x18\x02 \x01(\t\x12\x10\n\x08incident\x18\x03 \x01(\t\x12/\n\x0b\x63reate_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nclose_time\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0b\x64\x65tect_time\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\x07\x63reator\x18\x05 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.User\x12\r\n\x05title\x18\x06 \x01(\t\x12\x14\n\x0c\x63ontent_type\x18\x07 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x08 \x01(\t\x12=\n\x0csignal_state\x18\t \x01(\x0e\x32\'.google.cloud.irm.v1alpha2.Signal.State\x12J\n\x10signal_artifacts\x18\x10 \x03(\x0b\x32\x30.google.cloud.irm.v1alpha2.Signal.SignalArtifact\x1a\x43\n\x0eSignalArtifact\x12\x13\n\tuser_type\x18\x02 \x01(\tH\x00\x12\x0b\n\x03uri\x18\x03 \x01(\tB\x0f\n\rartifact_type"@\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0e\n\nSTATE_OPEN\x10\x01\x12\x10\n\x0cSTATE_CLOSED\x10\x02:C\xea\x41@\n\x19irm.googleapis.com/Signal\x12#projects/{project}/signals/{signal}"\x89\x02\n\nAnnotation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\x06\x61uthor\x18\x02 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.User\x12/\n\x0b\x63reate_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x14\n\x0c\x63ontent_type\x18\x05 \x01(\t:d\xea\x41\x61\n\x1dirm.googleapis.com/Annotation\x12@projects/{project}/incidents/{incident}/annotations/{annotation}"z\n\x03Tag\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t:O\xea\x41L\n\x16irm.googleapis.com/Tag\x12\x32projects/{project}/incidents/{incident}/tags/{tag}"\x93\x01\n\x08Synopsis\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x06\x61uthor\x18\x04 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.User"\x99\t\n\x08Incident\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12M\n\x10\x65scalation_level\x18\x03 \x01(\x0e\x32\x33.google.cloud.irm.v1alpha2.Incident.EscalationLevel\x12\x0c\n\x04\x65tag\x18\x04 \x01(\t\x12>\n\x08severity\x18\x05 \x01(\x0e\x32,.google.cloud.irm.v1alpha2.Incident.Severity\x12\x38\n\x05stage\x18\x06 \x01(\x0e\x32).google.cloud.irm.v1alpha2.Incident.Stage\x12\x1a\n\x12\x64uplicate_incident\x18\t \x01(\t\x12.\n\nstart_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x35\n\x08synopsis\x18\x08 \x01(\x0b\x32#.google.cloud.irm.v1alpha2.Synopsis\x12S\n\x13\x63ommunication_venue\x18\n \x01(\x0b\x32\x36.google.cloud.irm.v1alpha2.Incident.CommunicationVenue\x1a\xec\x01\n\x12\x43ommunicationVenue\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\x12X\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x42.google.cloud.irm.v1alpha2.Incident.CommunicationVenue.ChannelType"Y\n\x0b\x43hannelType\x12\x1c\n\x18\x43HANNEL_TYPE_UNSPECIFIED\x10\x00\x12\x14\n\x10\x43HANNEL_TYPE_URI\x10\x01\x12\x16\n\x12\x43HANNEL_TYPE_SLACK\x10\x05"V\n\x0f\x45scalationLevel\x12 \n\x1c\x45SCALATION_LEVEL_UNSPECIFIED\x10\x00\x12!\n\x1d\x45SCALATION_LEVEL_ORGANIZATION\x10\x01"\x8d\x01\n\x08Severity\x12\x18\n\x14SEVERITY_UNSPECIFIED\x10\x00\x12\x11\n\rSEVERITY_HUGE\x10\x01\x12\x12\n\x0eSEVERITY_MAJOR\x10\x02\x12\x13\n\x0fSEVERITY_MEDIUM\x10\x03\x12\x12\n\x0eSEVERITY_MINOR\x10\x04\x12\x17\n\x13SEVERITY_NEGLIGIBLE\x10\x05"\x99\x01\n\x05Stage\x12\x15\n\x11STAGE_UNSPECIFIED\x10\x00\x12\x12\n\x0eSTAGE_DETECTED\x10\x04\x12\x11\n\rSTAGE_TRIAGED\x10\x01\x12\x13\n\x0fSTAGE_MITIGATED\x10\x02\x12\x12\n\x0eSTAGE_RESOLVED\x10\x03\x12\x14\n\x10STAGE_DOCUMENTED\x10\x05\x12\x13\n\x0fSTAGE_DUPLICATE\x10\x06:I\xea\x41\x46\n\x1birm.googleapis.com/Incident\x12\'projects/{project}/incidents/{incident}"\xd6\x02\n\x0cIncidentRole\x12:\n\x04type\x18\x01 \x01(\x0e\x32,.google.cloud.irm.v1alpha2.IncidentRole.Type\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t"\xe5\x01\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x1b\n\x17TYPE_INCIDENT_COMMANDER\x10\x01\x12\x1c\n\x18TYPE_COMMUNICATIONS_LEAD\x10\x02\x12\x18\n\x14TYPE_OPERATIONS_LEAD\x10\x03\x12.\n*TYPE_EXTERNAL_CUSTOMER_COMMUNICATIONS_LEAD\x10\x04\x12\x17\n\x13TYPE_PRIMARY_ONCALL\x10\x05\x12\x19\n\x15TYPE_SECONDARY_ONCALL\x10\x06\x12\x0e\n\nTYPE_OTHER\x10\x07"\xdf\x02\n\x16IncidentRoleAssignment\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x65tag\x18\x02 \x01(\t\x12\x35\n\x04role\x18\x03 \x01(\x0b\x32\'.google.cloud.irm.v1alpha2.IncidentRole\x12\x31\n\x08\x61ssignee\x18\x04 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.User\x12:\n\x11proposed_assignee\x18\x05 \x01(\x0b\x32\x1f.google.cloud.irm.v1alpha2.User:\x82\x01\xea\x41\x7f\n)irm.googleapis.com/IncidentRoleAssignment\x12Rprojects/{project_id_or_number}/incidents/{incident_id}/role_assignments/{role_id}"\xa2\x02\n\x08\x41rtifact\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x36\n\x04type\x18\x05 \x01(\x0e\x32(.google.cloud.irm.v1alpha2.Artifact.Type"?\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x0c\n\x08TYPE_URL\x10\x01\x12\x13\n\x0fTYPE_JIRA_ISSUE\x10\x04:^\xea\x41[\n\x1birm.googleapis.com/Artifact\x12<projects/{project}/incidents/{incident}/artifacts/{artifact}"\x8e\x02\n\x14\x43ommunicationChannel\x12\x46\n\x05\x65mail\x18\x01 \x01(\x0b\x32\x35.google.cloud.irm.v1alpha2.CommunicationChannel.EmailH\x00\x12\x63\n\x14notification_channel\x18\x02 \x01(\x0b\x32\x43.google.cloud.irm.v1alpha2.CommunicationChannel.NotificationChannelH\x00\x1a\x18\n\x05\x45mail\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x1a#\n\x13NotificationChannel\x12\x0c\n\x04name\x18\x01 \x01(\tB\n\n\x08\x65ndpoint"\x92\x04\n\x0cSubscription\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x65tag\x18\x02 \x01(\t\x12M\n\x14subscription_channel\x18\x03 \x01(\x0b\x32/.google.cloud.irm.v1alpha2.CommunicationChannel\x12\x46\n\x0b\x65vent_types\x18\x04 \x03(\x0e\x32\x31.google.cloud.irm.v1alpha2.Subscription.EventType"\xe2\x01\n\tEventType\x12\x1a\n\x16\x45VENT_TYPE_UNSPECIFIED\x10\x00\x12\x1b\n\x17\x45VENT_TYPE_TITLE_CHANGE\x10\x01\x12\x1e\n\x1a\x45VENT_TYPE_SYNOPSIS_CHANGE\x10\x02\x12\x1b\n\x17\x45VENT_TYPE_STAGE_CHANGE\x10\x03\x12\x1e\n\x1a\x45VENT_TYPE_SEVERITY_CHANGE\x10\x04\x12\x1d\n\x19\x45VENT_TYPE_ANNOTATION_ADD\x10\x05\x12 \n\x1c\x45VENT_TYPE_ANNOTATION_CHANGE\x10\x06:j\xea\x41g\n\x1firm.googleapis.com/Subscription\x12\x44projects/{project}/incidents/{incident}/subscriptions/{subscription}Bh\n#com.google.irm.service.v1alpha2.apiP\x01Z<google.golang.org/genproto/googleapis/cloud/irm/v1alpha2;irm\xf8\x01\x01\x62\x06proto3',
     dependencies=[
         google_dot_api_dot_annotations__pb2.DESCRIPTOR,
@@ -38,6 +39,7 @@ _SIGNAL_STATE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Signal.State",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="STATE_UNSPECIFIED",
@@ -45,12 +47,23 @@ _SIGNAL_STATE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="STATE_OPEN", index=1, number=1, serialized_options=None, type=None
+            name="STATE_OPEN",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="STATE_CLOSED", index=2, number=2, serialized_options=None, type=None
+            name="STATE_CLOSED",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -65,6 +78,7 @@ _INCIDENT_COMMUNICATIONVENUE_CHANNELTYPE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Incident.CommunicationVenue.ChannelType",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="CHANNEL_TYPE_UNSPECIFIED",
@@ -72,6 +86,7 @@ _INCIDENT_COMMUNICATIONVENUE_CHANNELTYPE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="CHANNEL_TYPE_URI",
@@ -79,6 +94,7 @@ _INCIDENT_COMMUNICATIONVENUE_CHANNELTYPE = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="CHANNEL_TYPE_SLACK",
@@ -86,6 +102,7 @@ _INCIDENT_COMMUNICATIONVENUE_CHANNELTYPE = _descriptor.EnumDescriptor(
             number=5,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -100,6 +117,7 @@ _INCIDENT_ESCALATIONLEVEL = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Incident.EscalationLevel",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="ESCALATION_LEVEL_UNSPECIFIED",
@@ -107,6 +125,7 @@ _INCIDENT_ESCALATIONLEVEL = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="ESCALATION_LEVEL_ORGANIZATION",
@@ -114,6 +133,7 @@ _INCIDENT_ESCALATIONLEVEL = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -128,6 +148,7 @@ _INCIDENT_SEVERITY = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Incident.Severity",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="SEVERITY_UNSPECIFIED",
@@ -135,12 +156,23 @@ _INCIDENT_SEVERITY = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="SEVERITY_HUGE", index=1, number=1, serialized_options=None, type=None
+            name="SEVERITY_HUGE",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="SEVERITY_MAJOR", index=2, number=2, serialized_options=None, type=None
+            name="SEVERITY_MAJOR",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="SEVERITY_MEDIUM",
@@ -148,9 +180,15 @@ _INCIDENT_SEVERITY = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="SEVERITY_MINOR", index=4, number=4, serialized_options=None, type=None
+            name="SEVERITY_MINOR",
+            index=4,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="SEVERITY_NEGLIGIBLE",
@@ -158,6 +196,7 @@ _INCIDENT_SEVERITY = _descriptor.EnumDescriptor(
             number=5,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -172,6 +211,7 @@ _INCIDENT_STAGE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Incident.Stage",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="STAGE_UNSPECIFIED",
@@ -179,12 +219,23 @@ _INCIDENT_STAGE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="STAGE_DETECTED", index=1, number=4, serialized_options=None, type=None
+            name="STAGE_DETECTED",
+            index=1,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="STAGE_TRIAGED", index=2, number=1, serialized_options=None, type=None
+            name="STAGE_TRIAGED",
+            index=2,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STAGE_MITIGATED",
@@ -192,9 +243,15 @@ _INCIDENT_STAGE = _descriptor.EnumDescriptor(
             number=2,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="STAGE_RESOLVED", index=4, number=3, serialized_options=None, type=None
+            name="STAGE_RESOLVED",
+            index=4,
+            number=3,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STAGE_DOCUMENTED",
@@ -202,6 +259,7 @@ _INCIDENT_STAGE = _descriptor.EnumDescriptor(
             number=5,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STAGE_DUPLICATE",
@@ -209,6 +267,7 @@ _INCIDENT_STAGE = _descriptor.EnumDescriptor(
             number=6,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -223,6 +282,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.IncidentRole.Type",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="TYPE_UNSPECIFIED",
@@ -230,6 +290,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_INCIDENT_COMMANDER",
@@ -237,6 +298,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_COMMUNICATIONS_LEAD",
@@ -244,6 +306,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=2,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_OPERATIONS_LEAD",
@@ -251,6 +314,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_EXTERNAL_CUSTOMER_COMMUNICATIONS_LEAD",
@@ -258,6 +322,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=4,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_PRIMARY_ONCALL",
@@ -265,6 +330,7 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=5,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_SECONDARY_ONCALL",
@@ -272,9 +338,15 @@ _INCIDENTROLE_TYPE = _descriptor.EnumDescriptor(
             number=6,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="TYPE_OTHER", index=7, number=7, serialized_options=None, type=None
+            name="TYPE_OTHER",
+            index=7,
+            number=7,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -289,6 +361,7 @@ _ARTIFACT_TYPE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Artifact.Type",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="TYPE_UNSPECIFIED",
@@ -296,9 +369,15 @@ _ARTIFACT_TYPE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="TYPE_URL", index=1, number=1, serialized_options=None, type=None
+            name="TYPE_URL",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="TYPE_JIRA_ISSUE",
@@ -306,6 +385,7 @@ _ARTIFACT_TYPE = _descriptor.EnumDescriptor(
             number=4,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -320,6 +400,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
     full_name="google.cloud.irm.v1alpha2.Subscription.EventType",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_UNSPECIFIED",
@@ -327,6 +408,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_TITLE_CHANGE",
@@ -334,6 +416,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_SYNOPSIS_CHANGE",
@@ -341,6 +424,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=2,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_STAGE_CHANGE",
@@ -348,6 +432,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_SEVERITY_CHANGE",
@@ -355,6 +440,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=4,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_ANNOTATION_ADD",
@@ -362,6 +448,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=5,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EVENT_TYPE_ANNOTATION_CHANGE",
@@ -369,6 +456,7 @@ _SUBSCRIPTION_EVENTTYPE = _descriptor.EnumDescriptor(
             number=6,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -385,6 +473,7 @@ _USER = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="user_id",
@@ -403,6 +492,7 @@ _USER = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="email",
@@ -421,6 +511,7 @@ _USER = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -436,6 +527,7 @@ _USER = _descriptor.Descriptor(
             full_name="google.cloud.irm.v1alpha2.User.user",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -450,6 +542,7 @@ _SIGNAL_SIGNALARTIFACT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="user_type",
@@ -468,6 +561,7 @@ _SIGNAL_SIGNALARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="uri",
@@ -486,6 +580,7 @@ _SIGNAL_SIGNALARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -501,6 +596,7 @@ _SIGNAL_SIGNALARTIFACT = _descriptor.Descriptor(
             full_name="google.cloud.irm.v1alpha2.Signal.SignalArtifact.artifact_type",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -514,6 +610,7 @@ _SIGNAL = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -532,6 +629,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="etag",
@@ -550,6 +648,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="incident",
@@ -568,6 +667,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="create_time",
@@ -586,6 +686,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="close_time",
@@ -604,6 +705,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="detect_time",
@@ -622,6 +724,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="creator",
@@ -640,6 +743,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="title",
@@ -658,6 +762,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content_type",
@@ -676,6 +781,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content",
@@ -694,6 +800,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="signal_state",
@@ -712,6 +819,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="signal_artifacts",
@@ -730,6 +838,7 @@ _SIGNAL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -751,6 +860,7 @@ _ANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -769,6 +879,7 @@ _ANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="author",
@@ -787,6 +898,7 @@ _ANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="create_time",
@@ -805,6 +917,7 @@ _ANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content",
@@ -823,6 +936,7 @@ _ANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content_type",
@@ -841,6 +955,7 @@ _ANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -862,6 +977,7 @@ _TAG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -880,6 +996,7 @@ _TAG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="display_name",
@@ -898,6 +1015,7 @@ _TAG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -919,6 +1037,7 @@ _SYNOPSIS = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="content_type",
@@ -937,6 +1056,7 @@ _SYNOPSIS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="content",
@@ -955,6 +1075,7 @@ _SYNOPSIS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_time",
@@ -973,6 +1094,7 @@ _SYNOPSIS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="author",
@@ -991,6 +1113,7 @@ _SYNOPSIS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1012,6 +1135,7 @@ _INCIDENT_COMMUNICATIONVENUE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="uri",
@@ -1030,6 +1154,7 @@ _INCIDENT_COMMUNICATIONVENUE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="display_name",
@@ -1048,6 +1173,7 @@ _INCIDENT_COMMUNICATIONVENUE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="channel_type",
@@ -1066,6 +1192,7 @@ _INCIDENT_COMMUNICATIONVENUE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1086,6 +1213,7 @@ _INCIDENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1104,6 +1232,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="title",
@@ -1122,6 +1251,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="escalation_level",
@@ -1140,6 +1270,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="etag",
@@ -1158,6 +1289,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="severity",
@@ -1176,6 +1308,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="stage",
@@ -1194,6 +1327,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="duplicate_incident",
@@ -1212,6 +1346,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="start_time",
@@ -1230,6 +1365,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="synopsis",
@@ -1248,6 +1384,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="communication_venue",
@@ -1266,6 +1403,7 @@ _INCIDENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1287,6 +1425,7 @@ _INCIDENTROLE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="type",
@@ -1305,6 +1444,7 @@ _INCIDENTROLE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="title",
@@ -1323,6 +1463,7 @@ _INCIDENTROLE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="description",
@@ -1341,6 +1482,7 @@ _INCIDENTROLE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1362,6 +1504,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1380,6 +1523,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="etag",
@@ -1398,6 +1542,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="role",
@@ -1416,6 +1561,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="assignee",
@@ -1434,6 +1580,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="proposed_assignee",
@@ -1452,6 +1599,7 @@ _INCIDENTROLEASSIGNMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1473,6 +1621,7 @@ _ARTIFACT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1491,6 +1640,7 @@ _ARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="display_name",
@@ -1509,6 +1659,7 @@ _ARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="etag",
@@ -1527,6 +1678,7 @@ _ARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="url",
@@ -1545,6 +1697,7 @@ _ARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="type",
@@ -1563,6 +1716,7 @@ _ARTIFACT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1584,6 +1738,7 @@ _COMMUNICATIONCHANNEL_EMAIL = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="address",
@@ -1602,6 +1757,7 @@ _COMMUNICATIONCHANNEL_EMAIL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1622,6 +1778,7 @@ _COMMUNICATIONCHANNEL_NOTIFICATIONCHANNEL = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1640,6 +1797,7 @@ _COMMUNICATIONCHANNEL_NOTIFICATIONCHANNEL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1660,6 +1818,7 @@ _COMMUNICATIONCHANNEL = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="email",
@@ -1678,6 +1837,7 @@ _COMMUNICATIONCHANNEL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="notification_channel",
@@ -1696,6 +1856,7 @@ _COMMUNICATIONCHANNEL = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1714,6 +1875,7 @@ _COMMUNICATIONCHANNEL = _descriptor.Descriptor(
             full_name="google.cloud.irm.v1alpha2.CommunicationChannel.endpoint",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -1728,6 +1890,7 @@ _SUBSCRIPTION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1746,6 +1909,7 @@ _SUBSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="etag",
@@ -1764,6 +1928,7 @@ _SUBSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="subscription_channel",
@@ -1782,6 +1947,7 @@ _SUBSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="event_types",
@@ -1800,6 +1966,7 @@ _SUBSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
