@@ -159,9 +159,9 @@ class IncidentServiceGrpcTransport(object):
     def force_incident_role_handover(self):
         """Return the gRPC stub for :meth:`IncidentServiceClient.force_incident_role_handover`.
 
-        Forces a role handover. This will fail if the 'proposed_assignee' field
-        of the IncidentRoleAssignment is not equal to the 'new_assignee' field
-        of the request. If the caller is the new_assignee,
+        Forces a role handover. This will fail if the 'proposed_assignee'
+        field of the IncidentRoleAssignment is not equal to the 'new_assignee'
+        field of the request. If the caller is the new_assignee,
         ConfirmIncidentRoleHandover should be used instead.
 
         Returns:

@@ -507,9 +507,9 @@ class IncidentServiceClient(object):
         metadata=None,
     ):
         """
-        Forces a role handover. This will fail if the 'proposed_assignee' field
-        of the IncidentRoleAssignment is not equal to the 'new_assignee' field
-        of the request. If the caller is the new_assignee,
+        Forces a role handover. This will fail if the 'proposed_assignee'
+        field of the IncidentRoleAssignment is not equal to the 'new_assignee'
+        field of the request. If the caller is the new_assignee,
         ConfirmIncidentRoleHandover should be used instead.
 
         Example:
@@ -610,8 +610,8 @@ class IncidentServiceClient(object):
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.Incident`
-            parent (str): Required. The resource name of the hosting Stackdriver project which the
-                incident belongs to. The name is of the form
+            parent (str): Required. The resource name of the hosting Stackdriver project which
+                the incident belongs to. The name is of the form
                 ``projects/{project_id_or_number}`` .
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
@@ -815,17 +815,11 @@ class IncidentServiceClient(object):
                 -  ``foo OR bar`` - matches incidents containing the word "foo" or the
                    word "bar"
                 -  ``start>2018-11-28`` - matches incidents which started after November
-                   11,
-
-                   2018.
-
+                   11, 2018.
                 -  ``start<=2018-11-28`` - matches incidents which started on or before
                    November 11, 2018.
                 -  ``start:2018-11-28`` - matches incidents which started on November
-                   11,
-
-                   2018.
-
+                   11, 2018.
                 -  ``start>7d`` - matches incidents which started after the point in
                    time 7*24 hours ago
                 -  ``start>180d`` - similar to 7d, but likely to cross the daylight
@@ -840,8 +834,8 @@ class IncidentServiceClient(object):
                 of resources in a page.
             time_zone (str): The time zone name. It should be an IANA TZ name, such as
                 "America/Los_Angeles". For more information, see
-                https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If no
-                time zone is specified, the default is UTC.
+                https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If no time
+                zone is specified, the default is UTC.
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
                 be retried using a default configuration.
@@ -1695,9 +1689,7 @@ class IncidentServiceClient(object):
                 -  ``start<=2018-11-28`` - matches signals which started on or before
                    November 11, 2018.
                 -  ``start:2018-11-28`` - matches signals which started on November 11,
-
                    2018.
-
                 -  ``start>"2018-11-28 01:02:03+04:00"`` - matches signals which started
                    after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
                    zone.
@@ -2038,8 +2030,8 @@ class IncidentServiceClient(object):
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.Tag`
-            roles (list[Union[dict, ~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment]]): Roles to add or update. Existing roles with the same type (and title,
-                for TYPE_OTHER roles) will be updated.
+            roles (list[Union[dict, ~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment]]): Roles to add or update. Existing roles with the same type (and
+                title, for TYPE_OTHER roles) will be updated.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment`
@@ -2399,8 +2391,9 @@ class IncidentServiceClient(object):
             >>> response = client.send_shift_handoff(parent, recipients, subject)
 
         Args:
-            parent (str): Required. The resource name of the Stackdriver project that the handoff
-                is being sent from. for example, ``projects/{project_id_or_number}``
+            parent (str): Required. The resource name of the Stackdriver project that the
+                handoff is being sent from. for example,
+                ``projects/{project_id_or_number}``
             recipients (list[str]): Required. Email addresses of the recipients of the handoff, for example,
                 "user@example.com". Must contain at least one entry.
             subject (str): Required. The subject of the email.
