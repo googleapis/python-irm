@@ -1962,8 +1962,8 @@ Signal = _reflection.GeneratedProtocolMessageType(
         ),
         "DESCRIPTOR": _SIGNAL,
         "__module__": "google.cloud.irm_v1alpha2.proto.incidents_pb2",
-        "__doc__": """A signal is a message calling attention to a (potential)
-  incident. An example is a page based on a Stackdriver Alerting policy.
+        "__doc__": """A signal is a message calling attention to a (potential) incident. An
+  example is a page based on a Stackdriver Alerting policy.
   
   
   Attributes:
