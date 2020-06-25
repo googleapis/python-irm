@@ -2214,7 +2214,7 @@ Tag = _reflection.GeneratedProtocolMessageType(
   
   Attributes:
       name:
-          Resource name of a tag, for example, “projects/{project_id_or_
+          Resource name of a tag, for example, “projects/{project_id_or\_
           number}/incidents/{incident_id}/tags/{tag_id}”
       display_name:
           Display name of the resource (for example, “cause:rollout”).
