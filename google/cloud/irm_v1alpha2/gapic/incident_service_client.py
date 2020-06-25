@@ -42,7 +42,7 @@ from google.protobuf import empty_pb2
 from google.protobuf import field_mask_pb2
 
 
-_GAPIC_LIBRARY_VERSION = pkg_resources.get_distribution("google-cloud-irm").version
+_GAPIC_LIBRARY_VERSION = pkg_resources.get_distribution("google-cloud-irm",).version
 
 
 class IncidentServiceClient(object):
@@ -118,14 +118,14 @@ class IncidentServiceClient(object):
     def project_path(cls, project):
         """Return a fully-qualified project string."""
         return google.api_core.path_template.expand(
-            "projects/{project}", project=project
+            "projects/{project}", project=project,
         )
 
     @classmethod
     def signal_path(cls, project, signal):
         """Return a fully-qualified signal string."""
         return google.api_core.path_template.expand(
-            "projects/{project}/signals/{signal}", project=project, signal=signal
+            "projects/{project}/signals/{signal}", project=project, signal=signal,
         )
 
     @classmethod
@@ -235,12 +235,12 @@ class IncidentServiceClient(object):
                 self.transport = transport
         else:
             self.transport = incident_service_grpc_transport.IncidentServiceGrpcTransport(
-                address=api_endpoint, channel=channel, credentials=credentials
+                address=api_endpoint, channel=channel, credentials=credentials,
             )
 
         if client_info is None:
             client_info = google.api_core.gapic_v1.client_info.ClientInfo(
-                gapic_version=_GAPIC_LIBRARY_VERSION
+                gapic_version=_GAPIC_LIBRARY_VERSION,
             )
         else:
             client_info.gapic_version = _GAPIC_LIBRARY_VERSION
@@ -251,7 +251,7 @@ class IncidentServiceClient(object):
         # (Ordinarily, these are the defaults specified in the `*_config.py`
         # file next to this one.)
         self._method_configs = google.api_core.gapic_v1.config.parse_method_configs(
-            client_config["interfaces"][self._INTERFACE_NAME]
+            client_config["interfaces"][self._INTERFACE_NAME],
         )
 
         # Save a dictionary of cached API call functions.
@@ -309,7 +309,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteArtifactRequest(name=name)
+        request = incidents_service_pb2.DeleteArtifactRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -394,7 +394,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.RequestIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -479,7 +479,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ConfirmIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -507,9 +507,9 @@ class IncidentServiceClient(object):
         metadata=None,
     ):
         """
-        Forces a role handover. This will fail if the 'proposed_assignee' field
-        of the IncidentRoleAssignment is not equal to the 'new_assignee' field
-        of the request. If the caller is the new_assignee,
+        Forces a role handover. This will fail if the 'proposed_assignee'
+        field of the IncidentRoleAssignment is not equal to the 'new_assignee'
+        field of the request. If the caller is the new_assignee,
         ConfirmIncidentRoleHandover should be used instead.
 
         Example:
@@ -564,7 +564,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ForceIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []
@@ -610,8 +610,8 @@ class IncidentServiceClient(object):
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.Incident`
-            parent (str): Required. The resource name of the hosting Stackdriver project which the
-                incident belongs to. The name is of the form
+            parent (str): Required. The resource name of the hosting Stackdriver project which
+                the incident belongs to. The name is of the form
                 ``projects/{project_id_or_number}`` .
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
@@ -644,7 +644,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateIncidentRequest(
-            incident=incident, parent=parent
+            incident=incident, parent=parent,
         )
         if metadata is None:
             metadata = []
@@ -715,7 +715,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.GetIncidentRequest(name=name)
+        request = incidents_service_pb2.GetIncidentRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -815,17 +815,11 @@ class IncidentServiceClient(object):
                 -  ``foo OR bar`` - matches incidents containing the word "foo" or the
                    word "bar"
                 -  ``start>2018-11-28`` - matches incidents which started after November
-                   11,
-
-                   2018.
-
+                   11, 2018.
                 -  ``start<=2018-11-28`` - matches incidents which started on or before
                    November 11, 2018.
                 -  ``start:2018-11-28`` - matches incidents which started on November
-                   11,
-
-                   2018.
-
+                   11, 2018.
                 -  ``start>7d`` - matches incidents which started after the point in
                    time 7*24 hours ago
                 -  ``start>180d`` - similar to 7d, but likely to cross the daylight
@@ -840,8 +834,8 @@ class IncidentServiceClient(object):
                 of resources in a page.
             time_zone (str): The time zone name. It should be an IANA TZ name, such as
                 "America/Los_Angeles". For more information, see
-                https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If no
-                time zone is specified, the default is UTC.
+                https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If no time
+                zone is specified, the default is UTC.
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
                 be retried using a default configuration.
@@ -876,7 +870,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchIncidentsRequest(
-            parent=parent, query=query, page_size=page_size, time_zone=time_zone
+            parent=parent, query=query, page_size=page_size, time_zone=time_zone,
         )
         if metadata is None:
             metadata = []
@@ -967,7 +961,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateIncidentRequest(
-            incident=incident, update_mask=update_mask
+            incident=incident, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -1062,7 +1056,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchSimilarIncidentsRequest(
-            name=name, page_size=page_size
+            name=name, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1154,7 +1148,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateAnnotationRequest(
-            parent=parent, annotation=annotation
+            parent=parent, annotation=annotation,
         )
         if metadata is None:
             metadata = []
@@ -1248,7 +1242,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListAnnotationsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1338,7 +1332,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.CreateTagRequest(parent=parent, tag=tag)
+        request = incidents_service_pb2.CreateTagRequest(parent=parent, tag=tag,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1404,7 +1398,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteTagRequest(name=name)
+        request = incidents_service_pb2.DeleteTagRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1496,7 +1490,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListTagsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1587,7 +1581,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateSignalRequest(
-            parent=parent, signal=signal
+            parent=parent, signal=signal,
         )
         if metadata is None:
             metadata = []
@@ -1695,9 +1689,7 @@ class IncidentServiceClient(object):
                 -  ``start<=2018-11-28`` - matches signals which started on or before
                    November 11, 2018.
                 -  ``start:2018-11-28`` - matches signals which started on November 11,
-
                    2018.
-
                 -  ``start>"2018-11-28 01:02:03+04:00"`` - matches signals which started
                    after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
                    zone.
@@ -1747,7 +1739,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.SearchSignalsRequest(
-            parent=parent, query=query, page_size=page_size
+            parent=parent, query=query, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -1896,7 +1888,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.GetSignalRequest(name=name)
+        request = incidents_service_pb2.GetSignalRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -1976,7 +1968,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateSignalRequest(
-            signal=signal, update_mask=update_mask
+            signal=signal, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2038,8 +2030,8 @@ class IncidentServiceClient(object):
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.Tag`
-            roles (list[Union[dict, ~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment]]): Roles to add or update. Existing roles with the same type (and title,
-                for TYPE_OTHER roles) will be updated.
+            roles (list[Union[dict, ~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment]]): Roles to add or update. Existing roles with the same type (and
+                title, for TYPE_OTHER roles) will be updated.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.irm_v1alpha2.types.IncidentRoleAssignment`
@@ -2163,7 +2155,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateArtifactRequest(
-            parent=parent, artifact=artifact
+            parent=parent, artifact=artifact,
         )
         if metadata is None:
             metadata = []
@@ -2256,7 +2248,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListArtifactsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -2347,7 +2339,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateArtifactRequest(
-            artifact=artifact, update_mask=update_mask
+            artifact=artifact, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2399,8 +2391,9 @@ class IncidentServiceClient(object):
             >>> response = client.send_shift_handoff(parent, recipients, subject)
 
         Args:
-            parent (str): Required. The resource name of the Stackdriver project that the handoff
-                is being sent from. for example, ``projects/{project_id_or_number}``
+            parent (str): Required. The resource name of the Stackdriver project that the
+                handoff is being sent from. for example,
+                ``projects/{project_id_or_number}``
             recipients (list[str]): Required. Email addresses of the recipients of the handoff, for example,
                 "user@example.com". Must contain at least one entry.
             subject (str): Required. The subject of the email.
@@ -2534,7 +2527,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateSubscriptionRequest(
-            parent=parent, subscription=subscription
+            parent=parent, subscription=subscription,
         )
         if metadata is None:
             metadata = []
@@ -2614,7 +2607,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.UpdateSubscriptionRequest(
-            subscription=subscription, update_mask=update_mask
+            subscription=subscription, update_mask=update_mask,
         )
         if metadata is None:
             metadata = []
@@ -2707,7 +2700,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListSubscriptionsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -2785,7 +2778,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteSubscriptionRequest(name=name)
+        request = incidents_service_pb2.DeleteSubscriptionRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -2872,7 +2865,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CreateIncidentRoleAssignmentRequest(
-            parent=parent, incident_role_assignment=incident_role_assignment
+            parent=parent, incident_role_assignment=incident_role_assignment,
         )
         if metadata is None:
             metadata = []
@@ -2943,7 +2936,7 @@ class IncidentServiceClient(object):
                 client_info=self._client_info,
             )
 
-        request = incidents_service_pb2.DeleteIncidentRoleAssignmentRequest(name=name)
+        request = incidents_service_pb2.DeleteIncidentRoleAssignmentRequest(name=name,)
         if metadata is None:
             metadata = []
         metadata = list(metadata)
@@ -3037,7 +3030,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.ListIncidentRoleAssignmentsRequest(
-            parent=parent, page_size=page_size
+            parent=parent, page_size=page_size,
         )
         if metadata is None:
             metadata = []
@@ -3133,7 +3126,7 @@ class IncidentServiceClient(object):
             )
 
         request = incidents_service_pb2.CancelIncidentRoleHandoverRequest(
-            name=name, new_assignee=new_assignee
+            name=name, new_assignee=new_assignee,
         )
         if metadata is None:
             metadata = []

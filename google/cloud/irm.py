@@ -22,4 +22,8 @@ from google.cloud.irm_v1alpha2 import enums
 from google.cloud.irm_v1alpha2 import types
 
 
-__all__ = ("enums", "types", "IncidentServiceClient")
+__all__ = (
+    "enums",
+    "types",
+    "IncidentServiceClient",
+)

@@ -1,32 +1,25 @@
 {
   "sources": [
     {
-      "generator": {
-        "name": "artman",
-        "version": "2.0.0",
-        "dockerImage": "googleapis/artman@sha256:b3b47805231a305d0f40c4bf069df20f6a2635574e6d4259fac651d3f9f6e098"
-      }
-    },
-    {
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/python-irm.git",
-        "sha": "b9aa811873ef42c61aabfbe2636807249ad82153"
+        "sha": "c3dc3263ab74c2c1cf9a94f67c4695decada44bf"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "28e76243c23cc282efbb288cb558c174e3e5e9ee",
-        "internalRef": "308294748"
+        "sha": "cf41866c6f14f10a07aa1e2a1260fc0a2727d889",
+        "internalRef": "317812187"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "01b6f23d24b27878b48667ce597876d66b59780e"
+        "sha": "cf2eff09d0f5319a4dc5cdce2b6356d85af4a798"
       }
     }
   ],
@@ -37,8 +30,7 @@
         "apiName": "irm",
         "apiVersion": "v1alpha2",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/irm/artman_irm_v1alpha2.yaml"
+        "generator": "bazel"
       }
     }
   ]

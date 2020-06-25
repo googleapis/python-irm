@@ -86,9 +86,9 @@ class Incident(object):
           STAGE_RESOLVED (int): This incident has been fully resolved, i.e. there are no immediate
           follow-up tasks.
           STAGE_DOCUMENTED (int): Postmortem for the incident was written.
-          STAGE_DUPLICATE (int): Stage for an incident with ``duplicate_incident``. This incident is not
-          authoritative anymore and the ``duplicate_incident`` should be used to
-          determine the stage.
+          STAGE_DUPLICATE (int): Stage for an incident with ``duplicate_incident``. This incident is
+          not authoritative anymore and the ``duplicate_incident`` should be used
+          to determine the stage.
         """
 
         STAGE_UNSPECIFIED = 0
